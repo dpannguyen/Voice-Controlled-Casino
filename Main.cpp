@@ -1,8 +1,8 @@
-#include "model/Card.h"
-#include "model/Input.h"
-#include "model/Output.h"
-#include "model/Deck.h"
-#include "model/Hand.h"
+#include "models/Card.h"
+#include "models/Input.h"
+#include "models/Output.h"
+#include "models/Deck.h"
+#include "models/Hand.h"
 
 int main(){
 
