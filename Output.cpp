@@ -3,7 +3,7 @@
 using namespace std;
 
 Output::Output() {
-	output = "":
+	output = "";
 }
 
 void talkTalk(string talk) {}
