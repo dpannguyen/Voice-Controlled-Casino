@@ -5,12 +5,12 @@
 
 class Output {
 	private:
-		string output;
+		std::string output;
 
 	public:
 		Output();
 
-		string getOutput { return output; }
+		std::string getOutput { return output; }
 		void talkTalk(string talk);
 
 		~Output();
