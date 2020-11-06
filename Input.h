@@ -5,7 +5,7 @@
 
 class Input {
 	private:
-		string command;
+		std::string command;
 
 	public:
 		// constructor
