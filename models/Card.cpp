@@ -1,15 +1,13 @@
 #include "Card.h"
 
-Card::Card(){
-
+Card::Card() {
+	number = -1;
+	suit = -1;
 }
 
-int getSuit(){
-
-}
-
-int getNumber(){
-
+Card::Card(int n, int s) {
+	number = n;
+	suit = s;
 }
 
 Card::~Card(){
