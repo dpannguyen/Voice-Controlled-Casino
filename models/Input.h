@@ -1,20 +1,16 @@
 #ifndef INPUT_H
 #define INPUT_H
 
+#include <iostream>
 #include <string>
+#include <MicrosoftCognitiveServicesSpeech/speechapi_cxx.h>
 
 class Input {
-	private:
-		std::string command;
-
 	public:
-		// constructor
 		Input();
-
-		std::string getCommand() { return command; }
-		void inputFromString();
-		void inputFromVoice();
-
-		//destructor
 		~Input();
-}
+		std::string inputFromVoice();
+		std::string inputFromString();
+};
+
+#endif
