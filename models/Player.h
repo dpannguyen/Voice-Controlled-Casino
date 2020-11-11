@@ -12,8 +12,9 @@ class Player {
     
     public:
         Player();
+	Player(Hand h);
         int getHandTotal();
-        void addCardToHand();
+        void addCardToHand(Card c);
         boolean checkBust();
         boolean checkBlackjack();
         ~Player();
