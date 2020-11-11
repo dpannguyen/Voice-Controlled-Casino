@@ -12,7 +12,7 @@ class Player {
     
     public:
         Player();
-	Player(Hand h);
+		Player(Hand h);
         int getHandTotal();
         void addCardToHand(Card c);
         boolean checkBust();
