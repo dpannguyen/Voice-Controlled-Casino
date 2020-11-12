@@ -2,14 +2,27 @@
 
 using namespace std;
 
-Player::Player() {}
+Player::Player() {
+}
 
-int getHandTotal() {}
+Player::Player(Hand h) {
+	hand = h;
+}
 
-void addCardToHand() {}
+int Player :: getHandTotal() {
+	return hand.getTotalValue();
+}
 
-bool checkBust() {}
+void Player :: addCardToHand(Card c) {
+	hand.addCard(c);
+}
 
-bool checkBlackjack() {}
+bool Player :: checkBust() {
+	return hand.checkBust();
+}
+
+bool Player :: checkBlackjack() {
+	return hand.checkBlackjack();
+}
 
 Player::~Player() {}

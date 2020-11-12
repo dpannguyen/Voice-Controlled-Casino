@@ -6,15 +6,20 @@
 #include <vector>
 #include "Card.h"
 
+using namespace std;
+
 class Deck {
     private:
-      std::vector<Card> cards;
-    
+      vector<Card> cards;
+      int pos;
+
     public:
       Deck();
+      //Deck(vector<Card> cardDeck);
 
       void shuffle();
       Card getNextCard();
 
       ~Deck();
 };
+#endif

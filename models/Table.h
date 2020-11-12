@@ -23,4 +23,5 @@ class Table {
         Table();
         ~Table();
         void runGame();
-}
+};
+#endif

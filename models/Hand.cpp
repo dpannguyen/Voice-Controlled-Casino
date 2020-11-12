@@ -1,17 +1,39 @@
 #include "Hand.h"
+#include "Card.h"
+#include <vector>
 
 using namespace std;
 
-Hand::Hand() {}
+Hand::Hand() {
+	totalValue = 0;
+}
+
+Hand::Hand(vector<Card> cardHand, int total) {
+	cards = cardHand;
+	totalValue = total;
+}
 
 Hand::~Hand() {}
 
-vector<Card> getCards() {}
+void Hand :: addCard(Card newCard) {
+	cards.push_back(newCard);
+	totalValue = totalValue + newCard.getNumber();
+}
 
-int getTotalValue() {}
+bool Hand :: checkBust() {
+	if (totalValue > 21) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
-void addCard() {}
-
-bool checkBust() {}
-
-bool checkBlackjack() {}
+bool Hand :: checkBlackjack() {
+	if (totalValue == 21) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

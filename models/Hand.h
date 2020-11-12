@@ -13,10 +13,12 @@ class Hand {
     
     public:
         Hand();
+	    Hand(std::vector<Card> cardHand, int total);
         ~Hand();
-        std::vector<Card> getCards();
-        int getTotalValue();
-        void addCard();
+        std::vector<Card> getCards() { return cards; }
+        int getTotalValue() { return totalValue; }
+        void addCard(Card newCard);
         bool checkBust();
         bool checkBlackjack();
-}
+};
+#endif
