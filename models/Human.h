@@ -6,7 +6,7 @@
 #include <vector>
 #include <Hand.h>
 
-class Human {
+class Human: public Player {
     private:
         std::vector<Hand> hand;
     
@@ -14,5 +14,5 @@ class Human {
         Human();
         void splitHand();
         ~Human();
-}
+};
 

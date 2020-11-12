@@ -6,11 +6,11 @@
 #include <vector>
 #include <Hand.h>
 
-class Player {
+class Dealer: public Player {
     private:
         std::vector<Hand> hand;
     
     public:
         Dealer();
         ~Dealer();
-}
+};
