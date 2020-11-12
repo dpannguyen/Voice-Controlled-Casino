@@ -7,6 +7,7 @@ Input::Input() {}
 
 Input::~Input() {}
 
+// Allows a human to play blackjack using input via voice commands.
 string Input::inputFromVoice() {
 	setlocale(LC_ALL, "");
 	auto config = SpeechConfig::FromSubscription("ef38dbb1561f43b49632d58e29398f28", "canadacentral");
@@ -40,6 +41,7 @@ string Input::inputFromVoice() {
 	return command;
 }
 
+// Allows a human to play blackjack using input via text commands.
 string Input::inputFromString() {
 	string command;
 	cout << "Enter your command: ";

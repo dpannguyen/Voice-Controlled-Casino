@@ -10,12 +10,16 @@ Table::Table() {
 
 Table::~Table() {}
 
+// Takes another card from the top of the deck.
 void Table::doHit(Player player) {}
 
+// Allows a player to hold their total and end their turn.
 void Table::doStand(Player player) {}
 
+// Splits the hand into two hands. Adds a bet to the second hand.
 void Table::doSplit(Player player) {}
 
+// Returns a human's hand.
 string Table :: getHumanHand(){
 	string humanHandString;
 	for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
@@ -32,6 +36,7 @@ string Table :: getHumanHand(){
 	return humanHandString;
 }
 
+// Returns the dealer's hand.
 string Table :: getDealerHand(){
 	string dealerHandString;
 	for(int counter = 0; counter < dealer.getHand().getCards().size(); counter++){
@@ -48,10 +53,12 @@ string Table :: getDealerHand(){
 	return dealerHandString;
 }
 
+// Checks if a player or dealer has won.
 int Table::checkWin() {
 	return win;
 }
 
+// Starts the game, configures the cards for dealer and players, provides narration of game updates as the game progresses.
 void Table::runGame() {
 	Output output;
 

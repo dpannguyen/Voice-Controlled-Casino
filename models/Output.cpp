@@ -7,6 +7,7 @@ Output::Output() {}
 
 Output::~Output() {}
 
+// Provides voice updates regarding game status throughout the game.
 void Output::outputAsVoice(string output) {
 	setlocale(LC_ALL, "");
 	auto config = SpeechConfig::FromSubscription("ef38dbb1561f43b49632d58e29398f28", "canadacentral");
@@ -33,6 +34,7 @@ void Output::outputAsVoice(string output) {
 	}
 }
 
+// Provides text updates regarding game status throughout the game.
 void Output::outputAsString(string output) {
 	cout << output << endl;
 	cout << endl;
