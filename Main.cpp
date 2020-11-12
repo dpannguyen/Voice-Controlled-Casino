@@ -29,8 +29,8 @@ int main() {
 
     output.outputAsString("What would you like to know?");
     output.outputAsVoice("What would you like to know?");
-    
-    string command = input.inputFromVoice();
+
+    command = input.inputFromVoice();
     for (unsigned int i = 0; i < command.size(); i++) {
         command[i] = tolower(command[i]);
     }
@@ -52,6 +52,10 @@ int main() {
         string dealer_hand = table.getDealerHand();
         output.outputAsVoice("Dealer's hand contains");
         output.outputAsVoice(dealer_hand);
+    
+    } else {
+        cout << "The application could not process your voice command properly.\n";
+		exit(1);
     }
 
 }
