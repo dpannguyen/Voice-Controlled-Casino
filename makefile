@@ -16,8 +16,8 @@ LIBS:=-lMicrosoft.CognitiveServices.Speech.core -lpthread -l:libasound.so.2
 all: blackjack
 
 # Note: to run, LD_LIBRARY_PATH should point to $LIBPATH.
-blackjack: main.cpp models/*.cpp
-	g++ $< -o $@ \
+blackjack: Main.cpp models/*.cpp
+	g++ $^ -o $@ \
 	    --std=c++14 \
 	    $(patsubst %,-I%, $(INCPATH)) \
 	    $(patsubst %,-L%, $(LIBPATH)) \

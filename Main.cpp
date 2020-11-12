@@ -3,24 +3,45 @@
 
 #include "models/Input.h"
 #include "models/Output.h"
-/*#include "models/Card.h"
+#include "models/Card.h"
 #include "models/Deck.h"
 #include "models/Hand.h"
 #include "models/Human.h"
 #include "models/Dealer.h"
-#include "models/Player.h"*/
+#include "models/Player.h"
+#include "models/Table.h"
 
 using namespace std;
 
 int main() {
     Input input;
-    cout << input.inputFromVoice() << endl;
-    cout << endl;
-    cout << input.inputFromString() << endl;
-    cout << endl;
-
     Output output;
-    output.outputAsVoice("Let's test this!");
-    output.outputAsString("And test this as well!");
-    cout << endl;
+
+    string command = input.inputFromVoice();
+    for (unsigned int i = 0; i < command.size(); i++) {
+        command[i] = tolower(command[i]);
+    }
+
+    Table table;
+    table.runGame();
+    
+    if ((command.find("what") != string::npos) && (command.find("my card") != string::npos)) {
+        string human_hand = table.getHumanHand();
+        output.outputAsVoice("Your hand contains");
+        output.outputAsVoice(human_hand);
+
+    } else if ((command.find("what") != string::npos) && (command.find("your card") != string::npos)) {
+        string dealer_hand = table.getDealerHand();
+        output.outputAsVoice("Dealer's hand contains");
+        output.outputAsVoice(dealer_hand);
+
+    } else if ((command.find("what") != string::npos) && (command.find("dealer's card") != string::npos)) {
+        string dealer_hand = table.getDealerHand();
+        output.outputAsVoice("Dealer's hand contains");
+        output.outputAsVoice(dealer_hand);
+
+    } else {
+        cout << "The application could not process your voice command properly.\n";
+		exit(1);
+    }
 }

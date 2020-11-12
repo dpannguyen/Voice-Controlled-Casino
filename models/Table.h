@@ -7,6 +7,7 @@
 #include "Human.h"
 #include "Dealer.h"
 #include "Deck.h"
+#include "Output.h"
 
 class Table {
     private:
@@ -14,14 +15,17 @@ class Table {
         Dealer dealer;
         Deck cardDeck;
         int win;
-        void doHit(Player player);
-        void doStand(Player player);
-        void doSplit(Player player);
+
         int checkWin();
         
     public:
         Table();
         ~Table();
         void runGame();
+        void doHit(Player player);
+        void doStand(Player player);
+        void doSplit(Player player);
+        string getHumanHand();
+        string getDealerHand();
 };
 #endif
