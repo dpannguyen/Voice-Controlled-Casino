@@ -23,7 +23,9 @@
     wget -O SpeechSDK-Linux.tar.gz https://aka.ms/csspeech/linuxbinary
     tar --strip 1 -xzf SpeechSDK-Linux.tar.gz -C "$SPEECHSDK_ROOT"
     ```
-* Navigate to the directory of where the `main.cpp` file is
+* Navigate to the directory of the Makefile of this repository
+* Edit the file `Makefile`:
+  * In the line `SPEECHSDK_ROOT:=/change/to/point/to/extracted/SpeechSDK` change the right-hand side to point to the location of your extract Speech SDK for Linux.
 * Run the command `make` to build the sample, the resulting executable will be called `blackjack`.
 
 ## Run the sample

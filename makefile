@@ -17,7 +17,7 @@ all: blackjack
 
 # Note: to run, LD_LIBRARY_PATH should point to $LIBPATH.
 blackjack: Main.cpp models/*.cpp
-	g++ $^ -o $@ \
+g++ $^ -o $@ \
 	    --std=c++14 \
 	    $(patsubst %,-I%, $(INCPATH)) \
 	    $(patsubst %,-L%, $(LIBPATH)) \
