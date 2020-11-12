@@ -22,3 +22,5 @@ blackjack: main.cpp models/*.cpp
 	    $(patsubst %,-I%, $(INCPATH)) \
 	    $(patsubst %,-L%, $(LIBPATH)) \
 	    $(LIBS)
+
+#
