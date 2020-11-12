@@ -4,18 +4,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <Hand.h>
+#include "Hand.h"
 
 class Player {
-    private:
-        std::vector<Hand> hand;
+    protected:
+        Hand hand;
     
     public:
         Player();
-		Player(Hand h);
+	Player(Hand h);
         int getHandTotal();
         void addCardToHand(Card c);
-        boolean checkBust();
-        boolean checkBlackjack();
+        bool checkBust();
+        bool checkBlackjack();
+	Hand getHand();
         ~Player();
-}
+};
+#endif

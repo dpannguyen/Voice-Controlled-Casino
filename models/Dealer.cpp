@@ -4,9 +4,10 @@
 
 using namespace std;
 
+// Initializes the dealer with a hand of cards.
+
 Dealer::Dealer() {
-    parent = NULL;
-    vector<Hand> hand(0, 0);
+    vector<Hand> hand;
 }
 
 Dealer::~Dealer() {}
