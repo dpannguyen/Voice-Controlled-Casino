@@ -83,7 +83,7 @@ void Table::runGame() {
 				output.outputAsString("K");
 				output.outputAsVoice("K");
 			} else {
-				string number = human.getHand().getCards().at(counter).getNumber();
+				string number = to_string(human.getHand().getCards().at(counter).getNumber());
 				output.outputAsString(number);
 				output.outputAsVoice(number);
 			}
@@ -104,7 +104,7 @@ void Table::runGame() {
 				output.outputAsString("K");
 				output.outputAsVoice("K");
 			} else {
-				string number = dealer.getHand().getCards().at(counter).getNumber();
+				string number = to_string(dealer.getHand().getCards().at(counter).getNumber());
 				output.outputAsString(number);
 				output.outputAsVoice(number);
 			}

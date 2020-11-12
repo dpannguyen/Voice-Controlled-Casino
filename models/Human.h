@@ -5,12 +5,11 @@
 #include <string>
 #include <vector>
 #include "Hand.h"
+#include "Player.h"
 
-using namespace std;
-
-class Human{
+class Human : public Player{
     private:
-        vector<Hand> hand;
+        std::vector<Hand> handSplits;
 	int sum;
     
     public:

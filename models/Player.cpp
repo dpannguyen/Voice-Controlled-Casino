@@ -25,4 +25,8 @@ bool Player :: checkBlackjack() {
 	return hand.checkBlackjack();
 }
 
+Hand Player :: getHand(){
+	return hand;
+}
+
 Player::~Player() {}

@@ -17,7 +17,8 @@ class Deck {
       Deck();
       //Deck(vector<Card> cardDeck);
 
-      void shuffle();
+      int myRand(int i);
+      void shuffleDeck();
       Card getNextCard();
 
       ~Deck();

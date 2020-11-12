@@ -6,10 +6,8 @@
 #include <vector>
 #include "Hand.h"
 
-using namespace std;
-
 class Player {
-    private:
+    protected:
         Hand hand;
     
     public:
@@ -19,6 +17,7 @@ class Player {
         void addCardToHand(Card c);
         bool checkBust();
         bool checkBlackjack();
+	Hand getHand();
         ~Player();
 };
 #endif

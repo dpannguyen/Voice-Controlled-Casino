@@ -21,6 +21,19 @@ int main() {
     for (unsigned int i = 0; i < command.size(); i++) {
         command[i] = tolower(command[i]);
     }
+    if (command.find("blackjack") == string::npos) {
+        cout << "The application is only meant to play Blackjack.\n";
+        cout << endl;
+        exit(1);
+    }
+
+    output.outputAsString("What would you like to know?");
+    output.outputAsVoice("What would you like to know?");
+    
+    string command = input.inputFromVoice();
+    for (unsigned int i = 0; i < command.size(); i++) {
+        command[i] = tolower(command[i]);
+    }
 
     Table table;
     table.runGame();
@@ -39,9 +52,6 @@ int main() {
         string dealer_hand = table.getDealerHand();
         output.outputAsVoice("Dealer's hand contains");
         output.outputAsVoice(dealer_hand);
-
-    } else {
-        cout << "The application could not process your voice command properly.\n";
-		exit(1);
     }
+
 }
