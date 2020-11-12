@@ -6,8 +6,6 @@
 #include <vector>
 #include "Hand.h"
 
-using namespace std;
-
 class Player {
     protected:
         Hand hand;
