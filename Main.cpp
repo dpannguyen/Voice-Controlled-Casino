@@ -48,7 +48,7 @@ int main() {
         output.outputAsVoice("Dealer's hand contains");
         output.outputAsVoice(dealer_hand);
 
-    } else if ((command.find("what") != string::npos) && (command.find("dealer's card") != string::npos)) {
+    } else if ((command.find("what") != string::npos) && ((command.find("dealer's card") != string::npos) || (command.find("dealers card") != string::npos))) {
         string dealer_hand = table.getDealerHand();
         output.outputAsVoice("Dealer's hand contains");
         output.outputAsVoice(dealer_hand);
