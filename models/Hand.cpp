@@ -5,7 +5,6 @@
 using namespace std;
 
 Hand::Hand() {
-	cards = null;
 	totalValue = 0;
 }
 
@@ -16,12 +15,12 @@ Hand::Hand(vector<Card> cardHand, int total) {
 
 Hand::~Hand() {}
 
-void addCard(Card newCard) {
+void Hand :: addCard(Card newCard) {
 	cards.push_back(newCard);
 	totalValue = totalValue + newCard.getNumber();
 }
 
-bool checkBust() {
+bool Hand :: checkBust() {
 	if (totalValue > 21) {
 		return true;
 	}
@@ -30,7 +29,7 @@ bool checkBust() {
 	}
 }
 
-bool checkBlackjack() {
+bool Hand :: checkBlackjack() {
 	if (totalValue == 21) {
 		return true;
 	}

@@ -10,8 +10,9 @@ class Output {
 	public:
 		Output();
 
-		std::string getOutput { return output; }
-		void talkTalk(string talk);
+		std::string getOutput() { return output; }
+		void talkTalk(std::string talk);
 
 		~Output();
-}
+};
+#endif

@@ -17,4 +17,5 @@ class Input {
 
 		//destructor
 		~Input();
-}
+};
+#endif

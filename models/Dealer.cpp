@@ -5,8 +5,7 @@
 using namespace std;
 
 Dealer::Dealer() {
-    parent = NULL;
-    vector<Hand> hand(0, 0);
+    vector<Hand> hand;
 }
 
 Dealer::~Dealer() {}

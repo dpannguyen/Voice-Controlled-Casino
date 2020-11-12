@@ -7,13 +7,12 @@ using namespace std;
 
 Human::Human() {
     sum = 0;
-    vector<Hand> hand(0, 0);
 }
-
+/*
 void splitHand(Card card1, Card card2) { 
     if card1.number == card2.number {
         vector<Hand> hand2(card2, card2.number);
     }
 }
-
+*/
 Human::~Human() {}
