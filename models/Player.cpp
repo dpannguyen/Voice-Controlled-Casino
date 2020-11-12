@@ -1,15 +1,30 @@
 #include "Player.h"
+#include "Hand.h"
 
 using namespace std;
 
-Player::Player() {}
+Player::Player() {
+	hand = null;
+}
 
-int getHandTotal() {}
+Player::Player(Hand h) {
+	hand = h;
+}
 
-void addCardToHand() {}
+int getHandTotal() {
+	return hand.getTotalValue();
+}
 
-bool checkBust() {}
+void addCardToHand(Card c) {
+	hand.addCard(c);
+}
 
-bool checkBlackjack() {}
+bool checkBust() {
+	return hand.checkBust();
+}
+
+bool checkBlackjack() {
+	return hand.checkBlackjack();
+}
 
 Player::~Player() {}

@@ -9,9 +9,11 @@
 class Deck {
     private:
       std::vector<Card> cards;
-    
+      int pos;
+
     public:
       Deck();
+      Deck(std::vector<Card> cardDeck);
 
       void shuffle();
       Card getNextCard();
