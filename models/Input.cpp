@@ -20,6 +20,16 @@ string Input::inputFromVoice() {
 		cout << "You said: " << result->Text << endl;
 		command = result->Text;
 
+		string commandLowerCase = command;
+		for (unsigned int i = 0; i < command.size(); i++) {
+    		commandLowerCase[i] = tolower(command[i]);
+		}
+
+		if (commandLowerCase.find("blackjack") == string::npos) {
+			cout << "The application is only meant to play Blackjack.\n";
+			exit(1);
+		}
+
 	} else if (result->Reason == ResultReason::NoMatch) {
         cout << "The application could not process your voice command properly.\n";
 		exit(1);
@@ -44,5 +54,16 @@ string Input::inputFromString() {
 	string command;
 	cout << "Enter your command: ";
     getline(cin, command);
+
+	string commandLowerCase = command;
+	for (unsigned int i = 0; i < command.size(); i++) {
+		commandLowerCase[i] = tolower(command[i]);
+	}
+
+	if (commandLowerCase.find("blackjack") == string::npos) {
+		cout << "The application is only meant to play Blackjack.\n";
+		exit(1);
+	}
+
 	return command;
 }
