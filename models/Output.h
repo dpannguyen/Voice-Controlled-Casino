@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <MicrosoftCognitiveServicesSpeech/speechapi_cxx.h>
+#include <speechapi_cxx.h>
 
 class Output {
 	public:
