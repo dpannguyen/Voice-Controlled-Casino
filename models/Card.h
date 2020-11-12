@@ -12,9 +12,10 @@ class Card {
     
     public:
       Card();
+      Card(int n, int s);
 
-      int getSuit();
-      int getNumber();
+      int getSuit() { return suit; }
+      int getNumber() { return number; }
 
       ~Card();
 };
