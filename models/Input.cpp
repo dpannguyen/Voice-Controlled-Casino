@@ -27,6 +27,7 @@ string Input::inputFromVoice() {
 
 		if (commandLowerCase.find("blackjack") == string::npos) {
 			cout << "The application is only meant to play Blackjack.\n";
+			cout << endl;
 			exit(1);
 		}
 
@@ -62,6 +63,7 @@ string Input::inputFromString() {
 
 	if (commandLowerCase.find("blackjack") == string::npos) {
 		cout << "The application is only meant to play Blackjack.\n";
+		cout << endl;
 		exit(1);
 	}
 

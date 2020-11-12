@@ -1,17 +1,16 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
+#include <iostream>
 #include <string>
+#include <speechapi_cxx.h>
 
 class Output {
-	private:
-		std::string output;
-
 	public:
 		Output();
-
-		std::string getOutput { return output; }
-		void talkTalk(string talk);
-
 		~Output();
-}
+		void outputAsVoice(std::string output);
+		void outputAsString(std::string output);
+};
+
+#endif
