@@ -4,11 +4,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <Hand.h>
+#include "Hand.h"
 
-class Human: public Player {
+using namespace std;
+
+class Human{
     private:
-        std::vector<Hand> hand;
+        vector<Hand> hand;
+	int sum;
     
     public:
         Human();
@@ -16,3 +19,4 @@ class Human: public Player {
         ~Human();
 };
 
+#endif

@@ -4,9 +4,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <Hand.h>
+#include "Hand.h"
+#include "Player.h"
 
-class Dealer: public Player {
+class Dealer : public Player {
     private:
         std::vector<Hand> hand;
     
@@ -14,3 +15,4 @@ class Dealer: public Player {
         Dealer();
         ~Dealer();
 };
+#endif

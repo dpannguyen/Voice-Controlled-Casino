@@ -2,16 +2,20 @@
 
 using namespace std;
 
-Table::Table() {}
+Table::Table() {
+	cardDeck.shuffle();
+	win = 0;
+	
+}
 
 Table::~Table() {}
 
-void doHit(Player player) {}
+void Table::doHit(Player player) {}
 
-void doStand(Player player) {}
+void Table::doStand(Player player) {}
 
-void doSplit(Player player) {}
+void Table::doSplit(Player player) {}
 
-int checkWin() {}
+int Table::checkWin() {return win;}
 
-void runGame() {}
+void Table::runGame() {}

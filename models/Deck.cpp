@@ -1,12 +1,10 @@
 #include "Deck.h"
-#include "Card.h"
 #include <algorithm>
 #include <vector>
 
 using namespace std;
 
-Deck::Deck(){
-	vector<Card> cards(52, null);
+Deck :: Deck(){
 	pos = 0;
 
 	for (int i = 1; i < 11; i++) {
@@ -26,23 +24,23 @@ Deck::Deck(){
 		cards.push_back(newCard);
 	}
 }
-
-Deck::Deck(vector<Card> cardDeck) {
+/*
+Deck(vector<Card> cardDeck){
 	cards = cardDeck;
 	pos = 0;
 }
-
-void Shuffle(){
+*/
+void Deck :: shuffle(){
 	random_shuffle(cards.begin(), cards.end());
 	pos = 0;
 }
 
-Card getNextCard(){
+Card Deck :: getNextCard(){
 	Card nextCard = cards[pos];
 	pos = pos + 1;
 	return nextCard;
 }
 
-Deck::~Deck(){
+Deck :: ~Deck(){
 
 }
