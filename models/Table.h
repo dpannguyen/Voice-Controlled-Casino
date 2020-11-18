@@ -15,7 +15,6 @@ class Table {
         Dealer dealer;
         Deck cardDeck;
         int win;
-
         int checkWin();
         
     public:

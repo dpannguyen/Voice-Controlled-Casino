@@ -2,22 +2,36 @@
 
 using namespace std;
 
+// Assembles a table, shuffles the deck of cards, and initializes win so that no one has won.
 Table::Table() {
 	cardDeck.shuffleDeck();
 	win = 0;
-	
 }
 
 Table::~Table() {}
 
 // Takes another card from the top of the deck.
-void Table::doHit(Player player) {}
+void Table::doHit(Player player) {
+	Card c;
+	c = cardDeck.getNextCard();
+	player.addCardToHand(c);
+}
 
-// Allows a player to hold their total and end their turn.
+// Allows a player to hold their total and end their turn. Do nothing.
 void Table::doStand(Player player) {}
 
-// Splits the hand into two hands. Adds a bet to the second hand.
-void Table::doSplit(Player player) {}
+// Splits the hand into two hands. 
+// Optional: Adds a bet to the second hand.
+void Table::doSplit(Player player) {
+	Card c1, c2;
+	c1 = cardDeck.getNextCard();
+	c2 = cardDeck.getNextCard();
+	if (c1.getNumber() == c2.getNumber()) {
+		player.addCardToHand(c1);
+		player.addHand();
+		player.addCardToHand2(c2);	
+	}
+}
 
 // Returns a human's hand.
 string Table :: getHumanHand(){
@@ -53,9 +67,14 @@ string Table :: getDealerHand(){
 	return dealerHandString;
 }
 
-// Checks if a player or dealer has won.
+// Checks if a player or dealer has won; returns true if they have, false if not.
 int Table::checkWin() {
-	return win;
+	if (dealer.checkBlackjack() == true || human.checkBlackjack() == true) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 // Starts the game, configures the cards for dealer and players, provides narration of game updates as the game progresses.
