@@ -89,10 +89,23 @@ void Table::runGame() {
 
 	cardDeck.shuffleDeck();
 
+	c1 = cardDeck.getNextCard();
+	human.addCardToHand(c1);
+	dealer.addCardToHand(cardDeck.getNextCard());
+	c2 = cardDeck.getNextCard();
+	if (c1.getNumber() == c2.getNumber()) {
+		split = human.splitHand();
+		if (split == true) {
+			human.addCardToHand2(c2);
+		}
+	} 
+	else {
+		human.addCardToHand(c2);
+	}
 	human.addCardToHand(cardDeck.getNextCard());
 	dealer.addCardToHand(cardDeck.getNextCard());
-	human.addCardToHand(cardDeck.getNextCard());
-	dealer.addCardToHand(cardDeck.getNextCard());
+
+	if 
 
 	while(!checkWin()){
 		output.outputAsString("In your hand, you have: ");
