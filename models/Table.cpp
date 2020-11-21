@@ -89,10 +89,10 @@ void Table::runGame() {
 
 	cardDeck.shuffleDeck();
 
-	c1 = cardDeck.getNextCard();
+	Card c1 = cardDeck.getNextCard();
 	human.addCardToHand(c1);
 	dealer.addCardToHand(cardDeck.getNextCard());
-	c2 = cardDeck.getNextCard();
+	Card c2 = cardDeck.getNextCard();
 	if (c1.getNumber() == c2.getNumber()) {
 		split = human.splitHand();
 		if (split == true) {
@@ -105,50 +105,114 @@ void Table::runGame() {
 	human.addCardToHand(cardDeck.getNextCard());
 	dealer.addCardToHand(cardDeck.getNextCard());
 
-	if 
 
-	while(!checkWin()){
+	//while(!checkWin()){
+	// Output initial cards in both human hand
+	output.outputAsString("In your hand, you have: ");
+	output.outputAsVoice("In your hand, you have: ");
+
+	for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
+		if(human.getHand().getCards().at(counter).getNumber() == 11 ){
+			output.outputAsString("J");
+			output.outputAsVoice("J");
+		} else if (human.getHand().getCards().at(counter).getNumber() == 12) {
+			output.outputAsString("Q");
+			output.outputAsVoice("Q");
+		} else if (human.getHand().getCards().at(counter).getNumber() == 13) {
+			output.outputAsString("K");
+			output.outputAsVoice("K");
+		} else {
+			string number = to_string(human.getHand().getCards().at(counter).getNumber());
+			output.outputAsString(number);
+			output.outputAsVoice(number);
+		}
+	}
+	cout << endl;
+
+	//Output first card in dealer's hand
+	output.outputAsString("In dealer's hand, it has: ");
+	output.outputAsVoice("In dealer's hand, it has: ");
+
+	//for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
+	if(dealer.getHand().getCards().at(0).getNumber() == 11 ){
+		output.outputAsString("J");
+		output.outputAsVoice("J");
+	} else if (dealer.getHand().getCards().at(0).getNumber() == 12) {
+		output.outputAsString("Q");
+		output.outputAsVoice("Q");
+	} else if (dealer.getHand().getCards().at(0).getNumber() == 13) {
+		output.outputAsString("K");
+		output.outputAsVoice("K");
+	} else {
+		string number = to_string(dealer.getHand().getCards().at(0).getNumber());
+		output.outputAsString(number);
+		output.outputAsVoice(number);
+	}
+	//}
+	cout << endl;
+
+
+	string action;
+
+	output.outputAsString("Would you like to stand or hit?");
+	cin >> action;
+
+	// Human recieves cards (hit) unitl they decide to stand
+	while(action != "stand") {
+		human.addCardToHand(cardDeck.getNextCard());
 		output.outputAsString("In your hand, you have: ");
 		output.outputAsVoice("In your hand, you have: ");
 
-		for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
-			if( human.getHand().getCards().at(counter).getNumber() == 11 ){
-				output.outputAsString("J");
-				output.outputAsVoice("J");
-			} else if (human.getHand().getCards().at(counter).getNumber() == 12) {
-				output.outputAsString("Q");
-				output.outputAsVoice("Q");
-			} else if (human.getHand().getCards().at(counter).getNumber() == 13) {
-				output.outputAsString("K");
-				output.outputAsVoice("K");
-			} else {
-				string number = to_string(human.getHand().getCards().at(counter).getNumber());
-				output.outputAsString(number);
-				output.outputAsVoice(number);
-			}
-		}
+		cout << getHumanHand();
 		cout << endl;
-		
+
+		if(human.checkBust()) {
+			cout << "Sorry it's a bust. Dealer Wins!" << endl;
+			return;
+		}
+		else if(human.checkBlackjack()) {
+			cout << "Coungratulations! You win!" << endl;
+			return;
+		}
+
+		output.outputAsString("Would you like to stand or hit?");
+		cin >> action;
+
+	}
+
+	//Only let dealer play if human hasn't already won or lost
+	if (!(human.checkBust() || human.checkBlackjack())) {
+		//Output initial dealer cards
 		output.outputAsString("In dealer's hand, it has: ");
 		output.outputAsVoice("In dealer's hand, it has: ");
-
-		for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
-			if( dealer.getHand().getCards().at(counter).getNumber() == 11 ){
-				output.outputAsString("J");
-				output.outputAsVoice("J");
-			} else if (dealer.getHand().getCards().at(counter).getNumber() == 12) {
-				output.outputAsString("Q");
-				output.outputAsVoice("Q");
-			} else if (dealer.getHand().getCards().at(counter).getNumber() == 13) {
-				output.outputAsString("K");
-				output.outputAsVoice("K");
-			} else {
-				string number = to_string(dealer.getHand().getCards().at(counter).getNumber());
-				output.outputAsString(number);
-				output.outputAsVoice(number);
-			}
-		}
+		cout << getDealerHand();
 		cout << endl;
-		win = 1;
+
+		//While dealer hasn't won or lost, continue to hit
+		while (!(dealer.checkBust() || dealer.checkBlackjack())) {
+			if (dealer.getHand().getTotalValue() > human.getHand().getTotalValue()) {
+				cout << "Sorry Dealer has greater total. Dealer wins!";
+				cout << endl;
+				return;
+			}
+
+			dealer.addCardToHand(cardDeck.getNextCard());
+
+			output.outputAsString("In dealer's hand, it has: ");
+			output.outputAsVoice("In dealer's hand, it has: ");
+
+			cout << getDealerHand();
+			cout << endl;
+		}
+
+		if(dealer.checkBust()) {
+			cout << "Dealer Busts. Congratulations you win!" << endl;
+		}
+		else if(dealer.checkBlackjack()) {
+			cout << "Dealer has a Blackjack. Dealer Wins!" << endl;
+		}
 	}
+
+	//win = 1;
+	//}
 }
