@@ -12,6 +12,7 @@
 class Table {
     private:
         Human human;
+        Player player;
         Dealer dealer;
         Deck cardDeck;
         int win;

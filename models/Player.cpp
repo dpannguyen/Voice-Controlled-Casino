@@ -36,17 +36,4 @@ Hand Player :: getHand(){
 	return hand;
 }
 
-Player::Player(Hand h, Hand h2) {
-	hand = h;
-	hand2 = h2;
-}
-
-Hand Player :: addHand(){
-	return hand2;
-}
-
-void Player :: addCardToHand2(Card c) {
-	hand2.addCard(c);
-}
-
 Player::~Player() {}
