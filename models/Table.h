@@ -11,8 +11,8 @@
 
 class Table {
     private:
-        Human human;
-        Player player;
+        Human firstHand;
+        Human secondHand;
         Dealer dealer;
         Deck cardDeck;
         int win;
@@ -27,5 +27,6 @@ class Table {
         void doSplit(Player player);
         string getHumanHand();
         string getDealerHand();
+        string getPlayerHand(Player player);
 };
 #endif

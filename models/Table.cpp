@@ -36,6 +36,7 @@ void Table::doSplit(Player player) {
 }
 
 // Returns a human's hand.
+// Not currently used
 string Table :: getHumanHand(){
 	string humanHandString;
 	for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
@@ -52,24 +53,25 @@ string Table :: getHumanHand(){
 	return humanHandString;
 }
 
-// Returns a human's second hand.
-string Table :: getPlayerHand(){
-	string playerHandString;
+// Returns a player's hand.
+string Table :: getPlayerHand(Player player){
+	string handString;
 	for(int counter = 0; counter < player.getHand().getCards().size(); counter++){
 		if( player.getHand().getCards().at(counter).getNumber() == 11 ){
-			playerHandString = playerHandString + "J ";
+			handString = handString + "J ";
 		} else if (player.getHand().getCards().at(counter).getNumber() == 12) {
-			playerHandString = playerHandString + "Q ";
+			handString = handString + "Q ";
 		} else if (player.getHand().getCards().at(counter).getNumber() == 13) {
-			playerHandString = playerHandString + "K ";
+			handString = handString + "K ";
 		} else {
-			playerHandString = playerHandString + to_string(player.getHand().getCards().at(counter).getNumber()) + " ";
+			handString = handString + to_string(player.getHand().getCards().at(counter).getNumber()) + " ";
 		}
 	}
-	return playerHandString;
+	return handString;
 }
 
 // Returns the dealer's hand.
+// Not currently used
 string Table :: getDealerHand(){
 	string dealerHandString;
 	for(int counter = 0; counter < dealer.getHand().getCards().size(); counter++){
@@ -110,11 +112,11 @@ void Table::runGame() {
 	cardDeck.shuffleDeck();
 
 	Card c1 = cardDeck.getNextCard();
-	human.addCardToHand(c1);
+	firstHand.addCardToHand(c1);
 	dealer.addCardToHand(cardDeck.getNextCard());
 	Card c2 = cardDeck.getNextCard();
 	Hand hand2;
-	Player player(hand2);
+	Human secondHand(hand2);
 
 	if (c1.getNumber() == c2.getNumber()) {
 		output.outputAsString("Would you like to split your cards into two hands? ");
@@ -122,13 +124,13 @@ void Table::runGame() {
 		string split;
 		cin >> split;
 		if (split == "yes") { // create a "second" player and add additional cards to human and player's hands
-			player.addCardToHand(c2);
-			human.addCardToHand(cardDeck.getNextCard());
-			player.addCardToHand(cardDeck.getNextCard());
+			secondHand.addCardToHand(c2);
+			firstHand.addCardToHand(cardDeck.getNextCard());
+			secondHand.addCardToHand(cardDeck.getNextCard());
 		}
 	} 
 	else {
-		human.addCardToHand(c2);
+		firstHand.addCardToHand(c2);
 	}
 	dealer.addCardToHand(cardDeck.getNextCard());
 
@@ -138,40 +140,40 @@ void Table::runGame() {
 	output.outputAsString("In your hand, you have: ");
 	output.outputAsVoice("In your hand, you have: ");
 
-	for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
-		if(human.getHand().getCards().at(counter).getNumber() == 11 ){
-			output.outputAsString("J");
+	for(int counter = 0; counter < firstHand.getHand().getCards().size(); counter++){
+		if(firstHand.getHand().getCards().at(counter).getNumber() == 11 ){
+			output.outputAsString("J ");
 			output.outputAsVoice("J");
-		} else if (human.getHand().getCards().at(counter).getNumber() == 12) {
-			output.outputAsString("Q");
+		} else if (firstHand.getHand().getCards().at(counter).getNumber() == 12) {
+			output.outputAsString("Q ");
 			output.outputAsVoice("Q");
-		} else if (human.getHand().getCards().at(counter).getNumber() == 13) {
-			output.outputAsString("K");
+		} else if (firstHand.getHand().getCards().at(counter).getNumber() == 13) {
+			output.outputAsString("K ");
 			output.outputAsVoice("K");
 		} else {
-			string number = to_string(human.getHand().getCards().at(counter).getNumber());
+			string number = to_string(firstHand.getHand().getCards().at(counter).getNumber());
 			output.outputAsString(number);
 			output.outputAsVoice(number);
 		}
 	}
 	cout << endl;
 
-	if (player.getHandTotal() > 0) {
+	if (secondHand.getHandTotal() > 0) {
 		output.outputAsString("In your second hand, you have: ");
 		output.outputAsVoice("In your second hand, you have: ");
 
-		for(int counter = 0; counter < player.getHand().getCards().size(); counter++){
-			if(player.getHand().getCards().at(counter).getNumber() == 11 ){
+		for(int counter = 0; counter < secondHand.getHand().getCards().size(); counter++){
+			if(secondHand.getHand().getCards().at(counter).getNumber() == 11 ){
 				output.outputAsString("J ");
 				output.outputAsVoice("J ");
-			} else if (player.getHand().getCards().at(counter).getNumber() == 12) {
+			} else if (secondHand.getHand().getCards().at(counter).getNumber() == 12) {
 				output.outputAsString("Q ");
 				output.outputAsVoice("Q ");
-			} else if (player.getHand().getCards().at(counter).getNumber() == 13) {
+			} else if (secondHand.getHand().getCards().at(counter).getNumber() == 13) {
 				output.outputAsString("K ");
 				output.outputAsVoice("K ");
 			} else {
-				string number = to_string(player.getHand().getCards().at(counter).getNumber());
+				string number = to_string(secondHand.getHand().getCards().at(counter).getNumber());
 				output.outputAsString(number);
 				output.outputAsVoice(number);
 			}
@@ -210,30 +212,30 @@ void Table::runGame() {
 
 	// Human recieves cards (hit) unitl they decide to stand
 	while(action != "stand") {
-		human.addCardToHand(cardDeck.getNextCard());
+		firstHand.addCardToHand(cardDeck.getNextCard());
 		output.outputAsString("In your hand, you have: ");
 		output.outputAsVoice("In your hand, you have: ");
 
-		cout << getHumanHand();
+		cout << getPlayerHand(firstHand);
 		cout << endl;
 
-		if(human.checkBust() && (player.getHandTotal() == 0)) {
+		if(firstHand.checkBust() && (secondHand.getHandTotal() == 0)) {
 			output.outputAsString("Sorry it's a bust. Dealer Wins!");
 			output.outputAsVoice("Sorry it's a bust. Dealer Wins!");
 			return;
 		}
-		else if (human.checkBust() && (player.getHandTotal() > 0)) {
+		else if (firstHand.checkBust() && (secondHand.getHandTotal() > 0)) {
 			output.outputAsString("Your first hand has busted. Continuing with second hand");
 			output.outputAsVoice("Your first hand has busted. Continuing with second hand");
 			action = "stand";
 		}
-		else if(human.checkBlackjack() && (player.getHandTotal() == 0)) {
+		else if(firstHand.checkBlackjack() && (secondHand.getHandTotal() == 0)) {
 			output.outputAsString("Coungratulations! You win!");
 			output.outputAsVoice("Coungratulations! You win!");
 			return;
 		}
 
-		else if (human.checkBlackjack() && (player.getHandTotal() > 0)) {
+		else if (firstHand.checkBlackjack() && (secondHand.getHandTotal() > 0)) {
 			output.outputAsString("Your first hand has won blackjack! Continuing with second hand");
 			output.outputAsVoice("Your first hand has won blackjack! Continuing with second hand");
 			action = "stand";
@@ -247,16 +249,16 @@ void Table::runGame() {
 
 	}
 	
-	if (!(human.checkBust() || human.checkBlackjack())) {
+	if (!(firstHand.checkBust() || firstHand.checkBlackjack())) {
 		//Output initial dealer cards
 		output.outputAsString("The dealer's hand has: ");
 		output.outputAsVoice("The dealer's hand has: ");
-		cout << getDealerHand();
+		cout << getPlayerHand(dealer);
 		cout << endl;
 
 		//While dealer hasn't won or lost, continue to hit
 		while (!(dealer.checkBust() || dealer.checkBlackjack())) {
-			if (dealer.getHand().getTotalValue() > human.getHand().getTotalValue()) {
+			if (dealer.getHand().getTotalValue() > firstHand.getHand().getTotalValue()) {
 				output.outputAsString("Sorry Dealer has greater total. Dealer wins!");
 				output.outputAsVoice("Sorry Dealer has greater total. Dealer wins!");
 				cout << endl;
@@ -268,7 +270,7 @@ void Table::runGame() {
 			output.outputAsString("In dealer's hand, it has: ");
 			output.outputAsVoice("In dealer's hand, it has: ");
 
-			cout << getDealerHand();
+			cout << getPlayerHand(dealer);
 			cout << endl;
 		}
 
@@ -280,25 +282,25 @@ void Table::runGame() {
 		}
 	}
 
-	if (player.getHandTotal() > 0) {
+	if (secondHand.getHandTotal() > 0) {
 		string hand2action;
 		output.outputAsString("Would you like to stand or hit for your second hand? ");
 		output.outputAsVoice("Would you like to stand or hit for your second hand? ");
 		cin >> hand2action;
 
 		while(hand2action != "stand") {
-			player.addCardToHand(cardDeck.getNextCard());
+			secondHand.addCardToHand(cardDeck.getNextCard());
 			output.outputAsString("In your second hand, you have: ");
 			output.outputAsVoice("In your second hand, you have: ");
-			cout << getPlayerHand();
+			cout << getPlayerHand(secondHand);
 			cout << endl;
 
-			if(player.checkBlackjack()) {
+			if(secondHand.checkBlackjack()) {
 				output.outputAsString("Your second hand has blackjack. Congratulations! You win!");
 				output.outputAsVoice("Your second hand has blackjack. Congratulations! You win!");
 				return;
 			}
-			else if(player.checkBust()) {
+			else if(secondHand.checkBust()) {
 				output.outputAsString("Your second hand has busted. Game over.");
 				output.outputAsVoice("Your second hand has busted. Game over.");
 				return;
@@ -311,16 +313,16 @@ void Table::runGame() {
 	}
 
 	//Only let dealer play if human hasn't already won or lost
-	if (!(player.checkBust()) || player.checkBlackjack()) {
+	if (!(secondHand.checkBust()) || secondHand.checkBlackjack()) {
 		//Output initial dealer cards
 		output.outputAsString("The dealer's hand has: ");
 		output.outputAsVoice("The dealer's hand has: ");
-		cout << getDealerHand();
+		cout << getPlayerHand(dealer);
 		cout << endl;
 
 		//While dealer hasn't won or lost, continue to hit
 		while (!(dealer.checkBust() || dealer.checkBlackjack())) {
-			if (dealer.getHand().getTotalValue() > player.getHand().getTotalValue()) {
+			if (dealer.getHand().getTotalValue() > secondHand.getHand().getTotalValue()) {
 				output.outputAsString("Sorry Dealer has greater total. Dealer wins!");
 				output.outputAsVoice("Sorry Dealer has greater total. Dealer wins!");
 				cout << endl;
@@ -332,7 +334,7 @@ void Table::runGame() {
 			output.outputAsString("In dealer's hand, it has: ");
 			output.outputAsVoice("In dealer's hand, it has: ");
 
-			cout << getDealerHand();
+			cout << getPlayerHand(dealer);
 			cout << endl;
 		}
 
