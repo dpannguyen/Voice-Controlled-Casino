@@ -130,7 +130,7 @@ void Table::runGame() {
 		}
 	} 
 	else {
-		firstHand.addCardToHand(c2);
+		firstHand.addCardToHand(cardDeck.getNextCard());
 	}
 	dealer.addCardToHand(cardDeck.getNextCard());
 
