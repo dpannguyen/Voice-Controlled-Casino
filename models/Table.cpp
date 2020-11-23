@@ -162,14 +162,14 @@ void Table::runGame() {
 
 		for(int counter = 0; counter < player.getHand().getCards().size(); counter++){
 			if(player.getHand().getCards().at(counter).getNumber() == 11 ){
-				output.outputAsString("J");
-				output.outputAsVoice("J");
+				output.outputAsString("J ");
+				output.outputAsVoice("J ");
 			} else if (player.getHand().getCards().at(counter).getNumber() == 12) {
-				output.outputAsString("Q");
-				output.outputAsVoice("Q");
+				output.outputAsString("Q ");
+				output.outputAsVoice("Q ");
 			} else if (player.getHand().getCards().at(counter).getNumber() == 13) {
-				output.outputAsString("K");
-				output.outputAsVoice("K");
+				output.outputAsString("K ");
+				output.outputAsVoice("K ");
 			} else {
 				string number = to_string(player.getHand().getCards().at(counter).getNumber());
 				output.outputAsString(number);
@@ -185,14 +185,14 @@ void Table::runGame() {
 
 	//for(int counter = 0; counter < human.getHand().getCards().size(); counter++){
 	if(dealer.getHand().getCards().at(0).getNumber() == 11 ){
-		output.outputAsString("J");
-		output.outputAsVoice("J");
+		output.outputAsString("J ");
+		output.outputAsVoice("J ");
 	} else if (dealer.getHand().getCards().at(0).getNumber() == 12) {
-		output.outputAsString("Q");
-		output.outputAsVoice("Q");
+		output.outputAsString("Q ");
+		output.outputAsVoice("Q ");
 	} else if (dealer.getHand().getCards().at(0).getNumber() == 13) {
-		output.outputAsString("K");
-		output.outputAsVoice("K");
+		output.outputAsString("K ");
+		output.outputAsVoice("K ");
 	} else {
 		string number = to_string(dealer.getHand().getCards().at(0).getNumber());
 		output.outputAsString(number);
@@ -246,6 +246,39 @@ void Table::runGame() {
 		}
 
 	}
+	
+	if (!(human.checkBust() || human.checkBlackjack())) {
+		//Output initial dealer cards
+		output.outputAsString("The dealer's hand has: ");
+		output.outputAsVoice("The dealer's hand has: ");
+		cout << getDealerHand();
+		cout << endl;
+
+		//While dealer hasn't won or lost, continue to hit
+		while (!(dealer.checkBust() || dealer.checkBlackjack())) {
+			if (dealer.getHand().getTotalValue() > human.getHand().getTotalValue()) {
+				output.outputAsString("Sorry Dealer has greater total. Dealer wins!");
+				output.outputAsVoice("Sorry Dealer has greater total. Dealer wins!");
+				cout << endl;
+				return;
+			}
+
+			dealer.addCardToHand(cardDeck.getNextCard());
+
+			output.outputAsString("In dealer's hand, it has: ");
+			output.outputAsVoice("In dealer's hand, it has: ");
+
+			cout << getDealerHand();
+			cout << endl;
+		}
+
+		if(dealer.checkBust()) {
+			cout << "Dealer Busts. Congratulations you win!" << endl;
+		}
+		else if(dealer.checkBlackjack()) {
+			cout << "Dealer has a Blackjack. Dealer Wins!" << endl;
+		}
+	}
 
 	if (player.getHandTotal() > 0) {
 		string hand2action;
@@ -278,7 +311,7 @@ void Table::runGame() {
 	}
 
 	//Only let dealer play if human hasn't already won or lost
-	if (!(human.checkBust() || human.checkBlackjack()) || !(player.checkBust()) || player.checkBlackjack()) {
+	if (!(player.checkBust()) || player.checkBlackjack()) {
 		//Output initial dealer cards
 		output.outputAsString("The dealer's hand has: ");
 		output.outputAsVoice("The dealer's hand has: ");
@@ -287,7 +320,7 @@ void Table::runGame() {
 
 		//While dealer hasn't won or lost, continue to hit
 		while (!(dealer.checkBust() || dealer.checkBlackjack())) {
-			if (dealer.getHand().getTotalValue() > human.getHand().getTotalValue() || dealer.getHand().getTotalValue() > player.getHand().getTotalValue()) {
+			if (dealer.getHand().getTotalValue() > player.getHand().getTotalValue()) {
 				output.outputAsString("Sorry Dealer has greater total. Dealer wins!");
 				output.outputAsVoice("Sorry Dealer has greater total. Dealer wins!");
 				cout << endl;
