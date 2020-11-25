@@ -20,7 +20,11 @@ Hand::~Hand() {}
 // Adds a card to the hand, and adjusts the total value accordingly.
 void Hand :: addCard(Card newCard) {
 	cards.push_back(newCard);
-	totalValue = totalValue + newCard.getNumber();
+	int val = newCard.getNumber();
+	if (newCard.getNumber() >= 10) {
+		val = 10;
+	}
+	totalValue = totalValue + val;
 }
 
 // Checks the value of the cards (for player or dealer) to determine if there is a bust.

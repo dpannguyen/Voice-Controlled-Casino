@@ -14,6 +14,7 @@ class Human : public Player{
     
     public:
         Human();
+        Human(Hand h);
         void splitHand();
         ~Human();
 };
