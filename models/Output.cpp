@@ -10,7 +10,7 @@ Output::~Output() {}
 // Provides voice updates regarding game status throughout the game.
 void Output::outputAsVoice(string output) {
 	setlocale(LC_ALL, "");
-	auto config = SpeechConfig::FromSubscription("ef38dbb1561f43b49632d58e29398f28", "canadacentral");
+	auto config = SpeechConfig::FromSubscription("023548ea8c1e485a9ef13557bb98d402", "canadacentral");
 	auto synthesizer = SpeechSynthesizer::FromConfig(config);
 
 	auto result = synthesizer->SpeakTextAsync(output).get();

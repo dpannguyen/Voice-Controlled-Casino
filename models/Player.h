@@ -6,18 +6,25 @@
 #include <vector>
 #include "Hand.h"
 
-class Player {
-    protected:
+class Player
+{
+private:
         Hand hand;
-    
-    public:
+
+public:
         Player();
-	Player(Hand h);
+        Player(Hand h);
+        ~Player();
+        
+        void setHand(Hand h);
         int getHandTotal();
+        std::string getHandName();
+        void setHandName(std::string name);
         void addCardToHand(Card c);
+        void removeLastCardFromHand(Card c);
         bool checkBust();
         bool checkBlackjack();
-	Hand getHand();
-        ~Player();
+        std::vector<Card> getHandCards();
 };
+
 #endif

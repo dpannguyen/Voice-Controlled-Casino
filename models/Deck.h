@@ -1,8 +1,9 @@
 #ifndef DECK_H
 #define DECK_H
 
-#include <iostream>
-#include <string>
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <vector>
 #include "Card.h"
 
@@ -12,15 +13,14 @@ class Deck {
     private:
       vector<Card> cards;
       int pos;
+      int myRand(int i);
 
     public:
       Deck();
-      //Deck(vector<Card> cardDeck);
-
-      int myRand(int i);
+      ~Deck();
+      
       void shuffleDeck();
       Card getNextCard();
-
-      ~Deck();
 };
+
 #endif

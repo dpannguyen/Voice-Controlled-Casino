@@ -1,48 +1,56 @@
 #include "Hand.h"
-#include "Card.h"
-#include <vector>
 
 using namespace std;
 
 // Initializes a hand of cards.
-Hand::Hand() {
+Hand::Hand()
+{
 	totalValue = 0;
+	handName = "hand";
 }
 
-// Initializes a hand of cards with the total value.
-Hand::Hand(vector<Card> cardHand, int total) {
-	cards = cardHand;
-	totalValue = total;
+Hand::Hand(string name)
+{
+	totalValue = 0;
+	handName = name;
 }
 
 Hand::~Hand() {}
 
 // Adds a card to the hand, and adjusts the total value accordingly.
-void Hand :: addCard(Card newCard) {
+void Hand ::addCard(Card newCard)
+{
 	cards.push_back(newCard);
-	int val = newCard.getNumber();
-	if (newCard.getNumber() >= 10) {
-		val = 10;
-	}
-	totalValue = totalValue + val;
+	int number;
+	if (newCard.getNumber() > 10) number = 10;
+	else number = newCard.getNumber();
+	totalValue = totalValue + number;
+}
+
+void Hand ::removeLastCard(Card lastCard)
+{
+	cards.pop_back();
+	int number;
+	if (lastCard.getNumber() > 10) number = 10;
+	else number = lastCard.getNumber();
+	totalValue = totalValue - number;
+}
+
+void Hand ::setName(std::string newName)
+{
+	handName = newName;
 }
 
 // Checks the value of the cards (for player or dealer) to determine if there is a bust.
-bool Hand :: checkBust() {
-	if (totalValue > 21) {
-		return true;
-	}
-	else {
-		return false;
-	}
+bool Hand ::checkBust()
+{
+	if (totalValue > 21) return true;
+	else return false;
 }
 
 // Checks if the value of the cards (for player or dealer) to determine a win.
-bool Hand :: checkBlackjack() {
-	if (totalValue == 21) {
-		return true;
-	}
-	else {
-		return false;
-	}
+bool Hand ::checkBlackjack()
+{
+	if (totalValue == 21) return true;
+	else return false;
 }

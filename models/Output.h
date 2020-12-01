@@ -9,6 +9,7 @@ class Output {
 	public:
 		Output();
 		~Output();
+		
 		void outputAsVoice(std::string output);
 		void outputAsString(std::string output);
 };

@@ -12,6 +12,4 @@ Card::Card(int n, int s) {
 	suit = s;
 }
 
-Card::~Card(){
-
-}
+Card::~Card(){}

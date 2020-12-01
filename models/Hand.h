@@ -1,24 +1,30 @@
 #ifndef HAND_H
 #define HAND_H
 
-#include <iostream>
 #include <string>
 #include <vector>
 #include "Card.h"
 
-class Hand {
-    private:
-        std::vector<Card> cards;
-        int totalValue;
+class Hand
+{
+private:
+    std::vector<Card> cards;
+    int totalValue;
+    std::string handName;
+
+public:
+    Hand();
+    Hand(std::string name);
+    ~Hand();
     
-    public:
-        Hand();
-	    Hand(std::vector<Card> cardHand, int total);
-        ~Hand();
-        std::vector<Card> getCards() { return cards; }
-        int getTotalValue() { return totalValue; }
-        void addCard(Card newCard);
-        bool checkBust();
-        bool checkBlackjack();
+    std::vector<Card> getCards() { return cards; }
+    int getTotalValue() { return totalValue; }
+    std::string getName() { return handName; }
+    void addCard(Card newCard);
+    void removeLastCard(Card lastCard);
+    void setName(std::string newName);
+    bool checkBust();
+    bool checkBlackjack();
 };
+
 #endif

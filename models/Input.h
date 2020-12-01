@@ -6,9 +6,13 @@
 #include <speechapi_cxx.h>
 
 class Input {
+	private:
+		std::string command;
+		
 	public:
 		Input();
 		~Input();
+		
 		std::string inputFromVoice();
 		std::string inputFromString();
 };
