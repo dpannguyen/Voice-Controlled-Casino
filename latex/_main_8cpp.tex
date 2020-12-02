@@ -1,0 +1,48 @@
+\hypertarget{_main_8cpp}{}\doxysection{Main.\+cpp File Reference}
+\label{_main_8cpp}\index{Main.cpp@{Main.cpp}}
+
+
+Main file that initializes a game of Blackjack when the user asks it to.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}models/\+Betting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}models/\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}models/\+Output.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}models/\+Table.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file that initializes a game of Blackjack when the user asks it to. 
+
+\begin{DoxyAuthor}{Author}
+Bridget Aine Hart , Zheng Frank Jiao , An Nguyen , Xuanran Qi , Christine Yang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2, 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The application welcomes the user to the game. The application recognizes the user\textquotesingle{}s speech input and starts the game when the user says \char`\"{}blackjack\char`\"{}. Other speech is regarded as invalid.
+
+Initializes the user\textquotesingle{}s bet for the game
+
+The game will be run as long as the user\textquotesingle{}s voice input is \char`\"{}yes\char`\"{}, signaling they would like to keep playing
+
+The game is run via the rungame method of the table class
+
+When the user has played through, they are given the option to play again
+
+When the user decides to stop playing (i.\+e. does not say \char`\"{}yes\char`\"{} when asked to keep playing), the application says via voice output that the application has ended.
