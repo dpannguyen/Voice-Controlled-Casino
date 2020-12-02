@@ -19,7 +19,7 @@ using namespace std;
  */
 Table::Table()
 {
-	cardDeck.shuffleDeck();
+	cardDeck = cardDeck->instance();
 }
 
 /**
@@ -28,7 +28,7 @@ Table::Table()
  */
 Table::Table(Betting *betting)
 {
-	cardDeck.shuffleDeck();
+	cardDeck = cardDeck->instance();
 	bet = betting;
 }
 
@@ -43,7 +43,7 @@ Table::~Table() {}
  */
 void Table::doHit(Player *player)
 {
-	player->addCardToHand(cardDeck.getNextCard());
+	player->addCardToHand(cardDeck->getNextCard());
 }
 
 /**
@@ -155,8 +155,8 @@ void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 {
 	Hand hand1;
 	firstHand->setHand(hand1);
-	Card card1 = cardDeck.getNextCard();
-	Card card2 = cardDeck.getNextCard();
+	Card card1 = cardDeck->getNextCard();
+	Card card2 = cardDeck->getNextCard();
 	firstHand->addCardToHand(card1);
 	firstHand->addCardToHand(card2);
 	getCardsInHand(firstHand);
@@ -185,14 +185,14 @@ void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 			firstHand->setHandName("first hand");
 			/** Remove the previously added card from the first hand */
 			firstHand->removeLastCardFromHand(card2);
-			firstHand->addCardToHand(cardDeck.getNextCard());
+			firstHand->addCardToHand(cardDeck->getNextCard());
 			getCardsInHand(firstHand);
 
 			Hand hand2("second hand");
 			secondHand->setHand(hand2);
 			/** Add the card that was removed from the first hand to the second hand */
 			secondHand->addCardToHand(card2);
-			secondHand->addCardToHand(cardDeck.getNextCard());
+			secondHand->addCardToHand(cardDeck->getNextCard());
 			getCardsInHand(secondHand);
 		}
 	}
@@ -200,8 +200,8 @@ void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 	/** Deal two cards to the dealer */
 	Hand dealerHand("dealer's hand");
 	dealer->setHand(dealerHand);
-	dealer->addCardToHand(cardDeck.getNextCard());
-	dealer->addCardToHand(cardDeck.getNextCard());
+	dealer->addCardToHand(cardDeck->getNextCard());
+	dealer->addCardToHand(cardDeck->getNextCard());
 	getCardsInHand(dealer);
 }
 
@@ -466,7 +466,7 @@ void Table::runGame()
 	/** Voice output that welcomes the user to the game and notifies them the deck has been shuffled */
 	output.outputAsVoice("Welcome to the game!");
 	output.outputAsVoice("Deck has been shuffled!");
-	cardDeck.shuffleDeck();
+	cardDeck->shuffleDeck();
 
 	/** initialize Player objects representing the first hand, second hand (in the event of a split), and Dealer */
 	Player firstHand;

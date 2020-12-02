@@ -6,11 +6,17 @@
  * This file initializes an object of class Deck, contains a method that shuffles the deck, a helper method that returns a random
  * integer so that each shuffle order is unique, a method that returns the next card from the top of the deck, 
  * and a destructor for the Deck objects. 
+ * Deck class follows the Singleton Design Pattern to ensure only one instance of deck exists.
  */
 
 #include "Deck.h"
 
 using namespace std;
+
+/**
+ * Instance of deck object
+ */
+Deck* Deck::deck_instance = NULL;
 
 /**
  * Constructor for a deck object.
@@ -29,24 +35,29 @@ Deck ::Deck()
 }
 
 /**
+ * Returns only one instance of deck object
+ * @return Deck instance
+ */ 
+Deck* Deck::instance() {
+	if (deck_instance == NULL) {
+		deck_instance = new Deck();
+	}
+	return deck_instance;
+}
+
+/**
  * Destructor for a deck object.
  */
 Deck ::~Deck() {}
 
 /**
- * Helper function that returns a random integer.
- * @param i An integer value of the current time.
- * @return Random integer value generated from an integer of the current time.
- */
-int Deck ::myRand(int i) { return rand() % i; }
-
-/**
+ * Shuffles cards in deck
  * @return Void
  */
 void Deck ::shuffleDeck()
 {
 	srand((unsigned)time(NULL));
-	random_shuffle(cards.begin(), cards.end(), myRand);
+	random_shuffle(cards.begin(), cards.end(), [](int i) -> int { return rand() % i; });
 	pos = 0;
 }
 

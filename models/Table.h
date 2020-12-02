@@ -20,7 +20,7 @@
 class Table
 {
 private:
-    Deck cardDeck; /**< Deck object that holds the deck of cards used for the game */
+    Deck *cardDeck; /**< Deck object that holds the deck of cards used for the game */
     Input input;   /**< Input object to handle user voice input */
     Output output; /**< Output object to handle voice output */
     Betting *bet;  /**< Pointer that points to the bet */
