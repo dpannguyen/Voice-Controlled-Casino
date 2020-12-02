@@ -19,7 +19,7 @@ using namespace std;
 Player::Player() {}
 
 /**
- * onstructor for a Player object that initializes a Player with a Hand.
+ * Constructor for a Player object that initializes a Player with a Hand.
  * @param h The Hand object to be assigned to the Player.
  */
 Player::Player(Hand h)
@@ -33,6 +33,7 @@ Player::Player(Hand h)
 Player::~Player() {}
 
 /**
+ * Setter method that initializes a player's hand.
  * @param h The Hand object to be assigned to the Player.
  * @return Void.
  */
@@ -42,6 +43,7 @@ void Player::setHand(Hand h)
 }
 
 /**
+ * Getter method that returns a hand's value.
  * @return Int representing the total value of the Player's Hand.
  */
 int Player ::getHandTotal()
@@ -50,6 +52,7 @@ int Player ::getHandTotal()
 }
 
 /**
+ * Getter method that returns a hand's name.
  * @return String representing the name of the Player's Hand.
  */
 string Player ::getHandName()
@@ -58,6 +61,7 @@ string Player ::getHandName()
 }
 
 /**
+ * Setter method that sets a hand's name to an input string.
  * @param name String representing the name of the Player's Hand.
  * @return Void.
  */
@@ -67,6 +71,7 @@ void Player::setHandName(string name)
 }
 
 /**
+ * Method that adds a card to a player's hand.
  * @param c Card object to be added to the Player's Hand.
  * @return Void.
  */
@@ -76,6 +81,7 @@ void Player ::addCardToHand(Card c)
 }
 
 /**
+ * Method that removes the most recently added card from the player's hand.
  * @param c Card object to be removed from the Player's Hand.
  * @return Void.
  */
@@ -85,6 +91,7 @@ void Player ::removeLastCardFromHand(Card c)
 }
 
 /**
+ * Checks if a player has busted.
  * @return bool. True if the Player has busted, false if not.
  */
 bool Player ::checkBust()
@@ -93,6 +100,7 @@ bool Player ::checkBust()
 }
 
 /**
+ * Checks if a player has blackjack.
  * @return bool. True if the Player has won, false if not.
  */
 bool Player ::checkBlackjack()
@@ -101,6 +109,7 @@ bool Player ::checkBlackjack()
 }
 
 /**
+ * Getter method that returns the cards in the player's hand.
  * @return vector<Card>. A vector of Card objects that the Player has in their Hand.
  */
 vector<Card> Player ::getHandCards()

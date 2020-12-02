@@ -24,9 +24,9 @@ Output::Output() {}
 Output::~Output() {}
 
 /**
+ * Uses the Microsoft Speech API to output text commands in the form of speech.
  * @param output The string to be processed into speech.
  * @return Void.
- * Uses the Microsoft Speech API to output text commands in the form of speech.
  */
 void Output::outputAsVoice(string output)
 {
@@ -60,9 +60,9 @@ void Output::outputAsVoice(string output)
 }
 
 /**
+ * Uses standard cout to process a string and output to the command line.
  * @param output The string to be outputted via cout.
  * @return Void
- * Uses standard cout to process a string and output to the command line.
  */
 void Output::outputAsString(string output)
 {

@@ -51,8 +51,8 @@ void Deck ::shuffleDeck()
 }
 
 /**
- * @return Card object
  * Returns the next card and increments the position in the Deck accordingly.
+ * @return Card object
  */
 Card Deck ::getNextCard()
 {

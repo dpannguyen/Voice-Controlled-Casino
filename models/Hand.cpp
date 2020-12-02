@@ -37,10 +37,10 @@ Hand::Hand(string name)
 Hand::~Hand() {}
 
 /**
- * @param newCard The card to be added to the hand.
- * @return Void.
  * Takes a card as input, and adjusts the total value according to the card's number.
  * If the card's number is over 10, it is added as 10 because this is the max value of a card in Blackjack.
+ * @param newCard The card to be added to the hand.
+ * @return Void.
  */
 void Hand ::addCard(Card newCard)
 {
@@ -54,11 +54,11 @@ void Hand ::addCard(Card newCard)
 }
 
 /**
- * @param lastCard The card that was most recently added to the Hand.
- * @return Void.
  * Removes the most recently added card from the hand, specified by input variable lastCard, and adjusts the totalValue 
  * of the Hand according to that card's value.
  * If the card's number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack.
+ * @param lastCard The card that was most recently added to the Hand.
+ * @return Void.
  */
 void Hand ::removeLastCard(Card lastCard)
 {
@@ -72,9 +72,9 @@ void Hand ::removeLastCard(Card lastCard)
 }
 
 /**
+ * Sets the handName of the Hand to the input string containing the new name.
  * @param newName A string containing the desired new name of the Hand.
  * @return Void.
- * Sets the handName of the Hand to the input string containing the new name.
  */
 void Hand ::setName(std::string newName)
 {
@@ -82,8 +82,8 @@ void Hand ::setName(std::string newName)
 }
 
 /**
- * @return Bool, true if the Hand has busted, and false if the Hand has not.
  * Checks the value of the cards for a player to determine if there is a bust, i.e. the totalValue of the cards exceeds 21.
+ * @return Bool, true if the Hand has busted, and false if the Hand has not.
  */
 bool Hand ::checkBust()
 {
@@ -94,8 +94,8 @@ bool Hand ::checkBust()
 }
 
 /**
- * @return Bool, true if the Hand has won, and false if the Hand has not.
  * Checks the value of the cards for a player to determine if there is blackjack, i.e. the totalValue of the cards is equal to 21.
+ * @return Bool, true if the Hand has won, and false if the Hand has not.
  */
 bool Hand ::checkBlackjack()
 {

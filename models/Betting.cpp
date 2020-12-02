@@ -26,6 +26,7 @@ Betting ::Betting()
 Betting ::~Betting() {}
 
 /**
+ * Getter method that returns the amount of money a player has.
  * @return Int. The amount of money a player has, as an integer.
  */
 int Betting ::getHumanMoney()
@@ -34,6 +35,7 @@ int Betting ::getHumanMoney()
 }
 
 /**
+ * Getter method that returns the amount of money a player places as a bet.
  * @return Int. The amount of money a player places as a bet, as an integer.
  */
 int Betting ::getBetMoney()
@@ -42,6 +44,7 @@ int Betting ::getBetMoney()
 }
 
 /**
+ * Getter method that returns the amount of money a player places as a bet for their second hand.
  * @return The amount of money a player places as a bet for their second hand.
  */
 int Betting ::getBetMoneySecondHand()
@@ -50,6 +53,7 @@ int Betting ::getBetMoneySecondHand()
 }
 
 /**
+ * Checks if the amount of money a player wants to bet is less than the amount of money they have available.
  * @param money Takes in the player's amount of money left as input.
  * @return Bool. True if the player has enough money to place the bet, false if they do not have enough money to place the bet.
  */
@@ -61,9 +65,9 @@ bool Betting ::checkBetMoney(int money)
 }
 
 /**
+ * Subtracts the desired bet from the total amount of money the player has.
  * @param datMoney Input is the desired denomination of money to be used as a bet.
  * @return Void.
- * Subtracts the desired bet from the total amount of money the player has.
  */
 void Betting ::betDatMoney(int datMoney)
 {
@@ -72,10 +76,10 @@ void Betting ::betDatMoney(int datMoney)
 }
 
 /**
- * @param datMoney Input is the desired denomination of money to be used as a bet for the player's second hand.
- * @return Void.
  * Assigns the amount of money to be bet for the second hand to the input value datMoney.
  * Subtracts the desired bet from the total amount of money the player has.
+ * @param datMoney Input is the desired denomination of money to be used as a bet for the player's second hand.
+ * @return Void.
  */
 void Betting ::betDatMoneySecondHand(int datMoney)
 {
@@ -84,9 +88,9 @@ void Betting ::betDatMoneySecondHand(int datMoney)
 }
 
 /**
- * @return Void.
  * When a player wins, twice the amount that they bet is added to their total.
  * This method also resets the betting amount for subsequent rounds.
+ * @return Void.
  */
 void Betting ::winMoney()
 {
@@ -95,9 +99,9 @@ void Betting ::winMoney()
 }
 
 /**
- * @return Void.
  * When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. 
  * This method also resets the betting amount for the second hand for subsequent rounds.
+ * @return Void.
  */
 void Betting ::winMoneySecondHand()
 {
@@ -106,8 +110,8 @@ void Betting ::winMoneySecondHand()
 }
 
 /**
- * @return Void.
  * The amount of the bet is set back to 0. No money is added to the player's hand.
+ * @return Void.
  */
 void Betting ::loseMoney()
 {
@@ -115,8 +119,8 @@ void Betting ::loseMoney()
 }
 
 /**
- * @return Void.
  * The amount of the bet for the second hand is set back to 0. No money is added to the player's second hand.
+ * @return Void.
  */
 void Betting ::loseMoneySecondHand()
 {

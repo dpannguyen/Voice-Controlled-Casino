@@ -24,9 +24,9 @@ Input::Input() {}
 Input::~Input() {}
 
 /**
- * @return string
  * Uses the Microsoft Speech API to recognize a human voice, 
  * and processes that sound into words that are outputted in the form of a string.
+ * @return string
  */
 string Input::inputFromVoice()
 {
@@ -73,8 +73,8 @@ string Input::inputFromVoice()
 }
 
 /**
- * @return string
  * Uses standard cin to collect input from the command line from a user, and return it as a string.
+ * @return string
  */
 string Input::inputFromString()
 {

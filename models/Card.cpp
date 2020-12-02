@@ -18,6 +18,7 @@ Card::Card()
 }
 
 /**
+ * Constructor that initializes card object with specified number and suit.
  * @param n Integer value representing the number of the card.
  * @param s Integer value representing the suit of the card.
  */

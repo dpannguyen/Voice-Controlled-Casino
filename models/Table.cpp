@@ -33,11 +33,12 @@ Table::Table(Betting *betting)
 }
 
 /**
- * @brief Destructor for a Table object.
+ * Destructor for a Table object.
  */
 Table::~Table() {}
 
 /**
+ * Adds a card to the player's hand.
  * @param player A pointer to the Player object whose Hand is to be added to.
  */
 void Table::doHit(Player *player)
@@ -46,11 +47,11 @@ void Table::doHit(Player *player)
 }
 
 /**
- * @param player A pointer to the Player object whose Hand contents are to be returned.
- * @return Void.
  * Converts the face cards from their respective number values to J, Q, or K to more accurately represent a Deck of Cards.
  * Loops through the Player's Hand until all Cards have been accounted for.
  * Adds all of the Cards to a string. That string is then converted into speech output via the outputAsVoice method.
+ * @param player A pointer to the Player object whose Hand contents are to be returned.
+ * @return Void.
  */
 void Table ::getCardsInHand(Player *player)
 {
@@ -78,12 +79,12 @@ void Table ::getCardsInHand(Player *player)
 }
 
 /**
- * @param handName A string that signifies which Hand they are placing a bet for.
- * @return Void.
  * Tells the Player their total money via speech output, asks how much they would like to bet, checks to see if they have 
  * enough money to place the desired bet, and if so, adds the money to the bet and speaks the amount they have bet.
  * If not, informs the Player via speech that they cannot place the requested bet.
  * Handles errors if the speech is unclear or invalid and therefore cannot be processed. 
+ * @param handName A string that signifies which Hand they are placing a bet for.
+ * @return Void.
  */
 void Table::doBet(string handName)
 {
@@ -142,13 +143,13 @@ void Table::doBet(string handName)
 }
 
 /**
+ * Deals two cards to the Player's first hand. If those Cards have the same value, the Player has the option to split the Cards
+ * into two Hands and add a second card to each Hand. If this option is chosen, then the second Card dealt is removed from the first 
+ * Hand and is added to the second Hand, and an additional Card is added to each. Then, two Cards are dealt to the Dealer.
  * @param firstHand A pointer to the Hand object that is the Player's first Hand
  * @param secondHand A pointer to the Hand object that is the Player's second Hand
  * @param dealer A poitner to the Hand object that is the Dealer's hand
  * @return Void.
- * Deals two cards to the Player's first hand. If those Cards have the same value, the Player has the option to split the Cards
- * into two Hands and add a second card to each Hand. If this option is chosen, then the second Card dealt is removed from the first 
- * Hand and is added to the second Hand, and an additional Card is added to each. Then, two Cards are dealt to the Dealer.
  */
 void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 {
@@ -205,12 +206,12 @@ void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 }
 
 /**
- * @param hand A pointer to the Player object representing the Hand that is to be played.
- * @return bool. True if the Player has won Blackjack or has Busted and the game is over, false if not.
  * Method that notifies the Player it is their turn to play via voice output, specifies if it is their second Hand that is playing,
  * places the desired bet, asks them if they would like to stand (end their turn) or hit (be dealt another card), accepts voice input
  * to determine which option they have picked, continues dealing cards until they have Busted, won Blackjack, or have chosen
  * to Stand. A boolean variable keeps track of whether or not the game is over in the case of Busting or winning Blackjack.
+ * @param hand A pointer to the Player object representing the Hand that is to be played.
+ * @return bool. True if the Player has won Blackjack or has Busted and the game is over, false if not.
  */
 bool Table::playHand(Player *hand)
 {
@@ -288,14 +289,14 @@ bool Table::playHand(Player *hand)
 }
 
 /**
- * @param dealer A pointer to the dealer Player object
- * @param player A pointer to the user Player object
- * @return Void.
  * Method that notifies the Player it is the Dealer's turn to play. Places the desired bet. Continues to deal cards to the Dealer (hit)
  * as long as the Dealer hasn't Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output.
  * In this case, the game is over.
  * Otherwise, compares the total of the Player's Hand to the Dealer's Hand. If the Dealer's Hand has a higher value, 
  * they have won and the game is over and the user is notified of such. Adjusts the Player's bet according to a win or a loss. 
+ * @param dealer A pointer to the dealer Player object
+ * @param player A pointer to the user Player object
+ * @return Void.
  */
 void Table::playDealer(Player *dealer, Player *player)
 {
@@ -356,10 +357,6 @@ void Table::playDealer(Player *dealer, Player *player)
 }
 
 /**
- * @param dealer A pointer to the dealer Player object
- * @param hand1 A pointer to the Player's first hand
- * @param hand2 A poitner to the Player's second hand
- * @return Void.
  * Method that overrides the previous playDealer method in the case that a Player has split their hand and has 2 hands.
  * It notifies the Player it is the Dealer's turn to play. Places the desired bets for both hands. 
  * Continues to deal cards to the Dealer (hit) as long as the Dealer hasn't Busted or won Blackjack. 
@@ -368,6 +365,10 @@ void Table::playDealer(Player *dealer, Player *player)
  * they have won and the game is over for that hand and the user is notified of such. 
  * Plays through until both hands have either won or lost. 
  * Adjusts the Player's bets for each hand according to a win or a loss. 
+ * @param dealer A pointer to the dealer Player object
+ * @param hand1 A pointer to the Player's first hand
+ * @param hand2 A poitner to the Player's second hand
+ * @return Void.
  */
 void Table::playDealer(Player *dealer, Player *hand1, Player *hand2)
 {
@@ -457,6 +458,7 @@ void Table::playDealer(Player *dealer, Player *hand1, Player *hand2)
 }
 
 /**
+ * Method that initiates Blackjack.
  * @return Void. 
  */
 void Table::runGame()
