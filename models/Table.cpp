@@ -2,7 +2,6 @@
  * @file Table.cpp
  * @author Bridget Aine Hart , Zheng Frank Jiao , An Nguyen , Xuanran Qi , Christine Yang
  * @date December 2, 2020
- * @brief File containing code that defines a Table object that is used to play Blackjack.
  * 
  * This file initializes an object of class Table that automatically shuffles the deck. Contains a constructor that facillitates Betting.
  * Contains methods that run the game and deal cards to Players and Dealer.
@@ -16,7 +15,7 @@
 using namespace std;
 
 /**
- * @brief Constructor for a Table object. Shuffles the deck of cards.
+ * Constructor for a Table object. Shuffles the deck of cards.
  */
 Table::Table()
 {
@@ -24,7 +23,7 @@ Table::Table()
 }
 
 /**
- * @brief Constructor for a Table object. Shuffles the deck of cards and initializes the bet value.
+ * Shuffles the deck of cards and initializes the bet value.
  * @param betting A pointer to the Betting object that represents the amount of money a Player is betting in a round of Blackjack.
  */
 Table::Table(Betting *betting)
@@ -39,7 +38,6 @@ Table::Table(Betting *betting)
 Table::~Table() {}
 
 /**
- * @brief Method that allows a specified Player to do a Hit, which is essentially adding the next Card from the Deck to their Hand.
  * @param player A pointer to the Player object whose Hand is to be added to.
  */
 void Table::doHit(Player *player)
@@ -48,7 +46,6 @@ void Table::doHit(Player *player)
 }
 
 /**
- * @brief Method that outputs the Cards a Player has in their Hand as speech.
  * @param player A pointer to the Player object whose Hand contents are to be returned.
  * @return Void.
  * Converts the face cards from their respective number values to J, Q, or K to more accurately represent a Deck of Cards.
@@ -81,7 +78,6 @@ void Table ::getCardsInHand(Player *player)
 }
 
 /**
- * @brief Method that allows a Player to place a bet for one of their Hands.
  * @param handName A string that signifies which Hand they are placing a bet for.
  * @return Void.
  * Tells the Player their total money via speech output, asks how much they would like to bet, checks to see if they have 
@@ -146,7 +142,6 @@ void Table::doBet(string handName)
 }
 
 /**
- * @brief Method that deals cards to a Player's one or two Hands, and to the Dealer's Hand.
  * @param firstHand A pointer to the Hand object that is the Player's first Hand
  * @param secondHand A pointer to the Hand object that is the Player's second Hand
  * @param dealer A poitner to the Hand object that is the Dealer's hand
@@ -210,7 +205,6 @@ void Table::dealCards(Player *firstHand, Player *secondHand, Player *dealer)
 }
 
 /**
- * @brief Method that allows a Player to play their Hand.
  * @param hand A pointer to the Player object representing the Hand that is to be played.
  * @return bool. True if the Player has won Blackjack or has Busted and the game is over, false if not.
  * Method that notifies the Player it is their turn to play via voice output, specifies if it is their second Hand that is playing,
@@ -294,7 +288,6 @@ bool Table::playHand(Player *hand)
 }
 
 /**
- * @brief Method that allows a Dealer to play their Hand.
  * @param dealer A pointer to the dealer Player object
  * @param player A pointer to the user Player object
  * @return Void.
@@ -363,7 +356,6 @@ void Table::playDealer(Player *dealer, Player *player)
 }
 
 /**
- * @brief Method that allows a Dealer to play their Hand against a Player's split Hand.
  * @param dealer A pointer to the dealer Player object
  * @param hand1 A pointer to the Player's first hand
  * @param hand2 A poitner to the Player's second hand
@@ -465,7 +457,6 @@ void Table::playDealer(Player *dealer, Player *hand1, Player *hand2)
 }
 
 /**
- * @brief Method that starts the game, deals cards to the Player and Dealer, and controls the order of Player and Dealer turns.
  * @return Void. 
  */
 void Table::runGame()

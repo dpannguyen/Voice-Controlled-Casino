@@ -2,7 +2,6 @@
  * @file Output.cpp
  * @author Bridget Aine Hart , Zheng Frank Jiao , An Nguyen , Xuanran Qi , Christine Yang
  * @date December 2, 2020
- * @brief File containing code that uses the Microsoft Speech API to provide speech output as voice updates regarding game status.
  * 
  * This file initializes an object of class Output, and uses Microsoft's Speech API to provide speech output.
  * This ultimately allows a user to play Blackjack and receive voice updates throughout the game.
@@ -15,17 +14,16 @@ using namespace std;
 using namespace Microsoft::CognitiveServices::Speech;
 
 /**
- * @brief Constructor for a Output object. 
+ * Constructor for a Output object. 
  */
 Output::Output() {}
 
 /**
- * @brief Destructor for a Output object. 
+ * Destructor for a Output object. 
  */
 Output::~Output() {}
 
 /**
- * @brief Method that processes a string and outputs in the form of automated speech.
  * @param output The string to be processed into speech.
  * @return Void.
  * Uses the Microsoft Speech API to output text commands in the form of speech.
@@ -62,7 +60,6 @@ void Output::outputAsVoice(string output)
 }
 
 /**
- * @brief Method that outputs a string in the command line.
  * @param output The string to be outputted via cout.
  * @return Void
  * Uses standard cout to process a string and output to the command line.

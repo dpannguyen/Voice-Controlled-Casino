@@ -2,7 +2,6 @@
  * @file Input.cpp
  * @author Bridget Aine Hart , Zheng Frank Jiao , An Nguyen , Xuanran Qi , Christine Yang
  * @date December 2, 2020
- * @brief File containing code that processes user input in the forms of speech and text.
  * 
  * This file initializes an object of class Input, and uses Microsoft's Speech API to process user input in the form of speech.
  * This ultimately allows a user to play Blackjack using voice commands as input.
@@ -15,17 +14,16 @@ using namespace std;
 using namespace Microsoft::CognitiveServices::Speech;
 
 /**
- * @brief Constructor for a Input object. 
+ * Constructor for a Input object. 
  */
 Input::Input() {}
 
 /**
- * @brief Destructor for a Input object. 
+ * Destructor for a Input object. 
  */
 Input::~Input() {}
 
 /**
- * @brief Method that processes human speech and returns it as a string.
  * @return string
  * Uses the Microsoft Speech API to recognize a human voice, 
  * and processes that sound into words that are outputted in the form of a string.
@@ -75,7 +73,6 @@ string Input::inputFromVoice()
 }
 
 /**
- * @brief Method that processes user text input and returns it as a string.
  * @return string
  * Uses standard cin to collect input from the command line from a user, and return it as a string.
  */
