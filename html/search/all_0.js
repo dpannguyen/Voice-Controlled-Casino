@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cs_203307_20group_2023_20blackjack_20game_0',['CS 3307 Group 23 Blackjack Game',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['addcard_0',['addCard',['../class_hand.html#a8a3ed41baea1af51d96accc7a31ac0b9',1,'Hand']]],
+  ['addcardtohand_1',['addCardToHand',['../class_player.html#a73435c93ddaab1e82526c9ecce1c2615',1,'Player']]]
 ];
