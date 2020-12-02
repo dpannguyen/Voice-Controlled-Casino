@@ -38,7 +38,7 @@ Deck ::~Deck() {}
  * @param i An integer value of the current time.
  * @return Random integer value generated from an integer of the current time.
  */
-int myrand(int i) { return rand() % i; }
+int Deck ::myRand(int i) { return rand() % i; }
 
 /**
  * @return Void
@@ -46,7 +46,7 @@ int myrand(int i) { return rand() % i; }
 void Deck ::shuffleDeck()
 {
 	srand((unsigned)time(NULL));
-	random_shuffle(cards.begin(), cards.end(), myrand);
+	random_shuffle(cards.begin(), cards.end(), myRand);
 	pos = 0;
 }
 
