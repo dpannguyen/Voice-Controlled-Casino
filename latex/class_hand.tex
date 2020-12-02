@@ -74,13 +74,13 @@ Destructor for a \mbox{\hyperlink{class_hand}{Hand}} object.
 
 Method that adds a card to a \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Takes a card as input, and adjusts the total value according to the card\textquotesingle{}s number. If the card\textquotesingle{}s number is over 10, it is added as 10 because this is the max value of a card in Blackjack. 
 \begin{DoxyParams}{Parameters}
 {\em new\+Card} & The card to be added to the hand. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Takes a card as input, and adjusts the total value according to the card\textquotesingle{}s number. If the card\textquotesingle{}s number is over 10, it is added as 10 because this is the max value of a card in Blackjack. 
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_hand_a04d3274aea2c356c3e27a05c63a72070}\label{class_hand_a04d3274aea2c356c3e27a05c63a72070}} 
 \index{Hand@{Hand}!checkBlackjack@{checkBlackjack}}
@@ -92,8 +92,8 @@ Void. Takes a card as input, and adjusts the total value according to the card\t
 
 Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has won Blackjack. 
 
-\begin{DoxyReturn}{Returns}
-Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has won, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. Checks the value of the cards for a player to determine if there is blackjack, i.\+e. the total\+Value of the cards is equal to 21. 
+Checks the value of the cards for a player to determine if there is blackjack, i.\+e. the total\+Value of the cards is equal to 21. \begin{DoxyReturn}{Returns}
+Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has won, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_hand_ae7c987410669e0fc26786f7e4942aaf9}\label{class_hand_ae7c987410669e0fc26786f7e4942aaf9}} 
 \index{Hand@{Hand}!checkBust@{checkBust}}
@@ -105,8 +105,8 @@ Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has won, and false if the 
 
 Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has busted. 
 
-\begin{DoxyReturn}{Returns}
-Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has busted, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. Checks the value of the cards for a player to determine if there is a bust, i.\+e. the total\+Value of the cards exceeds 21. 
+Checks the value of the cards for a player to determine if there is a bust, i.\+e. the total\+Value of the cards exceeds 21. \begin{DoxyReturn}{Returns}
+Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has busted, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_hand_a2cf19548e8cccbd6fc6f251109a518e9}\label{class_hand_a2cf19548e8cccbd6fc6f251109a518e9}} 
 \index{Hand@{Hand}!removeLastCard@{removeLastCard}}
@@ -118,13 +118,13 @@ Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has busted, and false if t
 
 Method that removes the last card that was added to a \mbox{\hyperlink{class_hand}{Hand}} from the \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Removes the most recently added card from the hand, specified by input variable last\+Card, and adjusts the total\+Value of the \mbox{\hyperlink{class_hand}{Hand}} according to that card\textquotesingle{}s value. If the card\textquotesingle{}s number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack. 
 \begin{DoxyParams}{Parameters}
 {\em last\+Card} & The card that was most recently added to the \mbox{\hyperlink{class_hand}{Hand}}. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Removes the most recently added card from the hand, specified by input variable last\+Card, and adjusts the total\+Value of the \mbox{\hyperlink{class_hand}{Hand}} according to that card\textquotesingle{}s value. If the card\textquotesingle{}s number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack. 
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_hand_a67f85fee00b7dc52bb859326c27f3a32}\label{class_hand_a67f85fee00b7dc52bb859326c27f3a32}} 
 \index{Hand@{Hand}!setName@{setName}}
@@ -136,13 +136,13 @@ Void. Removes the most recently added card from the hand, specified by input var
 
 Method that sets the name of a \mbox{\hyperlink{class_hand}{Hand}} to a specified input string. 
 
-
+Sets the hand\+Name of the \mbox{\hyperlink{class_hand}{Hand}} to the input string containing the new name. 
 \begin{DoxyParams}{Parameters}
 {\em new\+Name} & A string containing the desired new name of the \mbox{\hyperlink{class_hand}{Hand}}. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Sets the hand\+Name of the \mbox{\hyperlink{class_hand}{Hand}} to the input string containing the new name. 
+Void. 
 \end{DoxyReturn}
 
 

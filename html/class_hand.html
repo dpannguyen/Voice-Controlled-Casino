@@ -179,13 +179,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method that adds a card to a <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Takes a card as input, and adjusts the total value according to the card's number. If the card's number is over 10, it is added as 10 because this is the max value of a card in Blackjack. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newCard</td><td>The card to be added to the hand. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Takes a card as input, and adjusts the total value according to the card's number. If the card's number is over 10, it is added as 10 because this is the max value of a card in Blackjack. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method that checks if a <a class="el" href="class_hand.html">Hand</a> has won Blackjack. </p>
-<dl class="section return"><dt>Returns</dt><dd>Bool, true if the <a class="el" href="class_hand.html">Hand</a> has won, and false if the <a class="el" href="class_hand.html">Hand</a> has not. Checks the value of the cards for a player to determine if there is blackjack, i.e. the totalValue of the cards is equal to 21. </dd></dl>
+<p>Checks the value of the cards for a player to determine if there is blackjack, i.e. the totalValue of the cards is equal to 21. </p><dl class="section return"><dt>Returns</dt><dd>Bool, true if the <a class="el" href="class_hand.html">Hand</a> has won, and false if the <a class="el" href="class_hand.html">Hand</a> has not. </dd></dl>
 
 </div>
 </div>
@@ -225,7 +225,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method that checks if a <a class="el" href="class_hand.html">Hand</a> has busted. </p>
-<dl class="section return"><dt>Returns</dt><dd>Bool, true if the <a class="el" href="class_hand.html">Hand</a> has busted, and false if the <a class="el" href="class_hand.html">Hand</a> has not. Checks the value of the cards for a player to determine if there is a bust, i.e. the totalValue of the cards exceeds 21. </dd></dl>
+<p>Checks the value of the cards for a player to determine if there is a bust, i.e. the totalValue of the cards exceeds 21. </p><dl class="section return"><dt>Returns</dt><dd>Bool, true if the <a class="el" href="class_hand.html">Hand</a> has busted, and false if the <a class="el" href="class_hand.html">Hand</a> has not. </dd></dl>
 
 </div>
 </div>
@@ -246,13 +246,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method that removes the last card that was added to a <a class="el" href="class_hand.html">Hand</a> from the <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Removes the most recently added card from the hand, specified by input variable lastCard, and adjusts the totalValue of the <a class="el" href="class_hand.html">Hand</a> according to that card's value. If the card's number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lastCard</td><td>The card that was most recently added to the <a class="el" href="class_hand.html">Hand</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Removes the most recently added card from the hand, specified by input variable lastCard, and adjusts the totalValue of the <a class="el" href="class_hand.html">Hand</a> according to that card's value. If the card's number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -273,13 +273,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method that sets the name of a <a class="el" href="class_hand.html">Hand</a> to a specified input string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the handName of the <a class="el" href="class_hand.html">Hand</a> to the input string containing the new name. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newName</td><td>A string containing the desired new name of the <a class="el" href="class_hand.html">Hand</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Sets the handName of the <a class="el" href="class_hand.html">Hand</a> to the input string containing the new name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>

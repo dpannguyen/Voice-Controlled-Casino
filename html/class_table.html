@@ -79,9 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03581fc904f58f33d685e7a362fa8f6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#a03581fc904f58f33d685e7a362fa8f6e">Table</a> (<a class="el" href="class_betting.html">Betting</a> *<a class="el" href="class_table.html#a9040e56ce2c9e939ab19339a1f21188f">bet</a>)</td></tr>
 <tr class="memdesc:a03581fc904f58f33d685e7a362fa8f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a <a class="el" href="class_table.html">Table</a> object. Shuffles the deck of cards and initializes the bet value.  <a href="class_table.html#a03581fc904f58f33d685e7a362fa8f6e">More...</a><br /></td></tr>
 <tr class="separator:a03581fc904f58f33d685e7a362fa8f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a559f2e7beb37b511ee9f88873164f8"><td class="memItemLeft" align="right" valign="top"><a id="a9a559f2e7beb37b511ee9f88873164f8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#a9a559f2e7beb37b511ee9f88873164f8">~Table</a> ()</td></tr>
-<tr class="memdesc:a9a559f2e7beb37b511ee9f88873164f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for a <a class="el" href="class_table.html">Table</a> object. <br /></td></tr>
+<tr class="memitem:a9a559f2e7beb37b511ee9f88873164f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#a9a559f2e7beb37b511ee9f88873164f8">~Table</a> ()</td></tr>
+<tr class="memdesc:a9a559f2e7beb37b511ee9f88873164f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for a <a class="el" href="class_table.html">Table</a> object.  <a href="class_table.html#a9a559f2e7beb37b511ee9f88873164f8">More...</a><br /></td></tr>
 <tr class="separator:a9a559f2e7beb37b511ee9f88873164f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf7bd801211221e72d9c0f266f567eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_table.html#aaf7bd801211221e72d9c0f266f567eca">doHit</a> (<a class="el" href="class_player.html">Player</a> *player)</td></tr>
 <tr class="memdesc:aaf7bd801211221e72d9c0f266f567eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that allows a specified <a class="el" href="class_player.html">Player</a> to do a Hit, which is essentially adding the next <a class="el" href="class_card.html">Card</a> from the <a class="el" href="class_deck.html">Deck</a> to their <a class="el" href="class_hand.html">Hand</a>.  <a href="class_table.html#aaf7bd801211221e72d9c0f266f567eca">More...</a><br /></td></tr>
@@ -170,6 +169,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="a9a559f2e7beb37b511ee9f88873164f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a559f2e7beb37b511ee9f88873164f8">&#9670;&nbsp;</a></span>~Table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Table::~Table </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for a <a class="el" href="class_table.html">Table</a> object. </p>
+<p>Destructor for a <a class="el" href="class_table.html">Table</a> object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a55a1af17dd83df5b14c60bc965364a8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55a1af17dd83df5b14c60bc965364a8e">&#9670;&nbsp;</a></span>dealCards()</h2>
@@ -204,7 +223,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that deals cards to a <a class="el" href="class_player.html">Player</a>'s one or two Hands, and to the Dealer's <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Deals two cards to the <a class="el" href="class_player.html">Player</a>'s first hand. If those Cards have the same value, the <a class="el" href="class_player.html">Player</a> has the option to split the Cards into two Hands and add a second card to each <a class="el" href="class_hand.html">Hand</a>. If this option is chosen, then the second <a class="el" href="class_card.html">Card</a> dealt is removed from the first <a class="el" href="class_hand.html">Hand</a> and is added to the second <a class="el" href="class_hand.html">Hand</a>, and an additional <a class="el" href="class_card.html">Card</a> is added to each. Then, two Cards are dealt to the Dealer. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">firstHand</td><td>A pointer to the <a class="el" href="class_hand.html">Hand</a> object that is the <a class="el" href="class_player.html">Player</a>'s first <a class="el" href="class_hand.html">Hand</a> </td></tr>
     <tr><td class="paramname">secondHand</td><td>A pointer to the <a class="el" href="class_hand.html">Hand</a> object that is the <a class="el" href="class_player.html">Player</a>'s second <a class="el" href="class_hand.html">Hand</a> </td></tr>
@@ -212,7 +231,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Deals two cards to the <a class="el" href="class_player.html">Player</a>'s first hand. If those Cards have the same value, the <a class="el" href="class_player.html">Player</a> has the option to split the Cards into two Hands and add a second card to each <a class="el" href="class_hand.html">Hand</a>. If this option is chosen, then the second <a class="el" href="class_card.html">Card</a> dealt is removed from the first <a class="el" href="class_hand.html">Hand</a> and is added to the second <a class="el" href="class_hand.html">Hand</a>, and an additional <a class="el" href="class_card.html">Card</a> is added to each. Then, two Cards are dealt to the Dealer. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>If the cards have the same value, then the <a class="el" href="class_player.html">Player</a> has the option to split the cards into two hands</p>
 <p>Asks if the user would like to do this</p>
 <p>Accepts speech response as answer to above question</p>
@@ -241,13 +260,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that allows a <a class="el" href="class_player.html">Player</a> to place a bet for one of their Hands. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Tells the <a class="el" href="class_player.html">Player</a> their total money via speech output, asks how much they would like to bet, checks to see if they have enough money to place the desired bet, and if so, adds the money to the bet and speaks the amount they have bet. If not, informs the <a class="el" href="class_player.html">Player</a> via speech that they cannot place the requested bet. Handles errors if the speech is unclear or invalid and therefore cannot be processed. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handName</td><td>A string that signifies which <a class="el" href="class_hand.html">Hand</a> they are placing a bet for. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Tells the <a class="el" href="class_player.html">Player</a> their total money via speech output, asks how much they would like to bet, checks to see if they have enough money to place the desired bet, and if so, adds the money to the bet and speaks the amount they have bet. If not, informs the <a class="el" href="class_player.html">Player</a> via speech that they cannot place the requested bet. Handles errors if the speech is unclear or invalid and therefore cannot be processed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>Outputs as voice the total money in the player's hand</p>
 <p>Asks user how much they would like to bet</p>
 <p>If the user input is within the acceptable range, put the corresponding amount of money into the betMoney variable</p>
@@ -277,7 +296,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that allows a specified <a class="el" href="class_player.html">Player</a> to do a Hit, which is essentially adding the next <a class="el" href="class_card.html">Card</a> from the <a class="el" href="class_deck.html">Deck</a> to their <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Adds a card to the player's hand. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>A pointer to the <a class="el" href="class_player.html">Player</a> object whose <a class="el" href="class_hand.html">Hand</a> is to be added to. </td></tr>
   </table>
@@ -303,13 +322,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that outputs the Cards a <a class="el" href="class_player.html">Player</a> has in their <a class="el" href="class_hand.html">Hand</a> as speech. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Converts the face cards from their respective number values to J, Q, or K to more accurately represent a <a class="el" href="class_deck.html">Deck</a> of Cards. Loops through the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> until all Cards have been accounted for. Adds all of the Cards to a string. That string is then converted into speech output via the outputAsVoice method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>A pointer to the <a class="el" href="class_player.html">Player</a> object whose <a class="el" href="class_hand.html">Hand</a> contents are to be returned. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Converts the face cards from their respective number values to J, Q, or K to more accurately represent a <a class="el" href="class_deck.html">Deck</a> of Cards. Loops through the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> until all Cards have been accounted for. Adds all of the Cards to a string. That string is then converted into speech output via the outputAsVoice method. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>Loops through all of the cards in the hand</p>
 <p>Converts face cards from number to letter values</p>
 <p>Outputs the player's hand name and the cards in the hand as voice</p>
@@ -343,14 +362,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that allows a Dealer to play their <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Method that notifies the <a class="el" href="class_player.html">Player</a> it is the Dealer's turn to play. Places the desired bet. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn't Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> to the Dealer's <a class="el" href="class_hand.html">Hand</a>. If the Dealer's <a class="el" href="class_hand.html">Hand</a> has a higher value, they have won and the game is over and the user is notified of such. Adjusts the <a class="el" href="class_player.html">Player</a>'s bet according to a win or a loss. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dealer</td><td>A pointer to the dealer <a class="el" href="class_player.html">Player</a> object </td></tr>
     <tr><td class="paramname">player</td><td>A pointer to the user <a class="el" href="class_player.html">Player</a> object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Method that notifies the <a class="el" href="class_player.html">Player</a> it is the Dealer's turn to play. Places the desired bet. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn't Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> to the Dealer's <a class="el" href="class_hand.html">Hand</a>. If the Dealer's <a class="el" href="class_hand.html">Hand</a> has a higher value, they have won and the game is over and the user is notified of such. Adjusts the <a class="el" href="class_player.html">Player</a>'s bet according to a win or a loss. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>Voice output that notifies it is the dealer's turn to play, and outputs the cards in the dealer's hand</p>
 <p>While dealer hasn't won or lost, continue to hit</p>
 <p>Compare the dealer's hand to the player's hand If the dealer's hand total is greater, notify the player they have lost via speech output Notify them of the amount of money they have lost via speech output</p>
@@ -391,7 +410,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that allows a Dealer to play their <a class="el" href="class_hand.html">Hand</a> against a <a class="el" href="class_player.html">Player</a>'s split <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Method that overrides the previous playDealer method in the case that a <a class="el" href="class_player.html">Player</a> has split their hand and has 2 hands. It notifies the <a class="el" href="class_player.html">Player</a> it is the Dealer's turn to play. Places the desired bets for both hands. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn't Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of each of the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> to the Dealer's <a class="el" href="class_hand.html">Hand</a>. If the Dealer's <a class="el" href="class_hand.html">Hand</a> has a higher value, they have won and the game is over for that hand and the user is notified of such. Plays through until both hands have either won or lost. Adjusts the <a class="el" href="class_player.html">Player</a>'s bets for each hand according to a win or a loss. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dealer</td><td>A pointer to the dealer <a class="el" href="class_player.html">Player</a> object </td></tr>
     <tr><td class="paramname">hand1</td><td>A pointer to the <a class="el" href="class_player.html">Player</a>'s first hand </td></tr>
@@ -399,7 +418,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Method that overrides the previous playDealer method in the case that a <a class="el" href="class_player.html">Player</a> has split their hand and has 2 hands. It notifies the <a class="el" href="class_player.html">Player</a> it is the Dealer's turn to play. Places the desired bets for both hands. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn't Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of each of the <a class="el" href="class_player.html">Player</a>'s <a class="el" href="class_hand.html">Hand</a> to the Dealer's <a class="el" href="class_hand.html">Hand</a>. If the Dealer's <a class="el" href="class_hand.html">Hand</a> has a higher value, they have won and the game is over for that hand and the user is notified of such. Plays through until both hands have either won or lost. Adjusts the <a class="el" href="class_player.html">Player</a>'s bets for each hand according to a win or a loss. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>Voice output that notifies it is the dealer's turn to play, and outputs the cards in the dealer's hand</p>
 <p>Boolean variables to determine if the method should keep playing through for each hand; while false, continue</p>
 <p>While dealer hasn't won or lost, continue to hit (deal cards)</p>
@@ -429,13 +448,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that allows a <a class="el" href="class_player.html">Player</a> to play their <a class="el" href="class_hand.html">Hand</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Method that notifies the <a class="el" href="class_player.html">Player</a> it is their turn to play via voice output, specifies if it is their second <a class="el" href="class_hand.html">Hand</a> that is playing, places the desired bet, asks them if they would like to stand (end their turn) or hit (be dealt another card), accepts voice input to determine which option they have picked, continues dealing cards until they have Busted, won Blackjack, or have chosen to Stand. A boolean variable keeps track of whether or not the game is over in the case of Busting or winning Blackjack. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hand</td><td>A pointer to the <a class="el" href="class_player.html">Player</a> object representing the <a class="el" href="class_hand.html">Hand</a> that is to be played. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool. True if the <a class="el" href="class_player.html">Player</a> has won Blackjack or has Busted and the game is over, false if not. Method that notifies the <a class="el" href="class_player.html">Player</a> it is their turn to play via voice output, specifies if it is their second <a class="el" href="class_hand.html">Hand</a> that is playing, places the desired bet, asks them if they would like to stand (end their turn) or hit (be dealt another card), accepts voice input to determine which option they have picked, continues dealing cards until they have Busted, won Blackjack, or have chosen to Stand. A boolean variable keeps track of whether or not the game is over in the case of Busting or winning Blackjack. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool. True if the <a class="el" href="class_player.html">Player</a> has won Blackjack or has Busted and the game is over, false if not. </dd></dl>
 <p>Notify user it is their turn to play, and specify if they are playing their second hand</p>
 <p>Bet for the first or second hand</p>
 <p>Prompt user player for their move</p>
@@ -463,7 +482,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Method that starts the game, deals cards to the <a class="el" href="class_player.html">Player</a> and Dealer, and controls the order of <a class="el" href="class_player.html">Player</a> and Dealer turns. </p>
-<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
+<p>Method that initiates Blackjack. </p><dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 <p>Voice output that welcomes the user to the game and notifies them the deck has been shuffled</p>
 <p>initialize <a class="el" href="class_player.html">Player</a> objects representing the first hand, second hand (in the event of a split), and Dealer</p>
 <p>Distribute cards to the Players using dealCards method</p>

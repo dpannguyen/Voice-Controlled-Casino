@@ -14,7 +14,6 @@ void \mbox{\hyperlink{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}{shuffle\+Dec
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_deck_ade16d60b05605080b4c8aeaafa735812}\label{class_deck_ade16d60b05605080b4c8aeaafa735812}} 
 int \mbox{\hyperlink{class_deck_ade16d60b05605080b4c8aeaafa735812}{my\+Rand}} (int i)
 \begin{DoxyCompactList}\small\item\em Helper function that returns a random integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -60,8 +59,26 @@ Destructor for a deck object.
 
 Method that returns the next \mbox{\hyperlink{class_card}{Card}} object from the \mbox{\hyperlink{class_deck}{Deck}}. 
 
+Returns the next card and increments the position in the \mbox{\hyperlink{class_deck}{Deck}} accordingly. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_card}{Card}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_deck_ade16d60b05605080b4c8aeaafa735812}\label{class_deck_ade16d60b05605080b4c8aeaafa735812}} 
+\index{Deck@{Deck}!myRand@{myRand}}
+\index{myRand@{myRand}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{myRand()}{myRand()}}
+{\footnotesize\ttfamily int Deck\+::my\+Rand (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper function that returns a random integer. 
+
+Helper function that returns a random integer. 
+\begin{DoxyParams}{Parameters}
+{\em i} & An integer value of the current time. \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{class_card}{Card}} object Returns the next card and increments the position in the \mbox{\hyperlink{class_deck}{Deck}} accordingly. 
+Random integer value generated from an integer of the current time. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}\label{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}} 
 \index{Deck@{Deck}!shuffleDeck@{shuffleDeck}}

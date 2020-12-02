@@ -7,7 +7,6 @@
 \begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_table}{Table}} object. Shuffles the deck of cards. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_table_a03581fc904f58f33d685e7a362fa8f6e}{Table}} (\mbox{\hyperlink{class_betting}{Betting}} $\ast$\mbox{\hyperlink{class_table_a9040e56ce2c9e939ab19339a1f21188f}{bet}})
 \begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_table}{Table}} object. Shuffles the deck of cards and initializes the bet value. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_table_a9a559f2e7beb37b511ee9f88873164f8}\label{class_table_a9a559f2e7beb37b511ee9f88873164f8}} 
 \mbox{\hyperlink{class_table_a9a559f2e7beb37b511ee9f88873164f8}{$\sim$\+Table}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{class_table}{Table}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_table_aaf7bd801211221e72d9c0f266f567eca}{do\+Hit}} (\mbox{\hyperlink{class_player}{Player}} $\ast$player)
@@ -68,7 +67,17 @@ Shuffles the deck of cards and initializes the bet value.
 {\em betting} & A pointer to the \mbox{\hyperlink{class_betting}{Betting}} object that represents the amount of money a \mbox{\hyperlink{class_player}{Player}} is betting in a round of Blackjack. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_table_a9a559f2e7beb37b511ee9f88873164f8}\label{class_table_a9a559f2e7beb37b511ee9f88873164f8}} 
+\index{Table@{Table}!````~Table@{$\sim$Table}}
+\index{````~Table@{$\sim$Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{$\sim$Table()}{~Table()}}
+{\footnotesize\ttfamily Table\+::$\sim$\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor for a \mbox{\hyperlink{class_table}{Table}} object. 
+
+Destructor for a \mbox{\hyperlink{class_table}{Table}} object. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_table_a55a1af17dd83df5b14c60bc965364a8e}\label{class_table_a55a1af17dd83df5b14c60bc965364a8e}} 
@@ -81,7 +90,7 @@ Shuffles the deck of cards and initializes the bet value.
 
 Method that deals cards to a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s one or two Hands, and to the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Deals two cards to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s first hand. If those Cards have the same value, the \mbox{\hyperlink{class_player}{Player}} has the option to split the Cards into two Hands and add a second card to each \mbox{\hyperlink{class_hand}{Hand}}. If this option is chosen, then the second \mbox{\hyperlink{class_card}{Card}} dealt is removed from the first \mbox{\hyperlink{class_hand}{Hand}} and is added to the second \mbox{\hyperlink{class_hand}{Hand}}, and an additional \mbox{\hyperlink{class_card}{Card}} is added to each. Then, two Cards are dealt to the Dealer. 
 \begin{DoxyParams}{Parameters}
 {\em first\+Hand} & A pointer to the \mbox{\hyperlink{class_hand}{Hand}} object that is the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s first \mbox{\hyperlink{class_hand}{Hand}} \\
 \hline
@@ -91,7 +100,7 @@ Method that deals cards to a \mbox{\hyperlink{class_player}{Player}}\textquotesi
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Deals two cards to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s first hand. If those Cards have the same value, the \mbox{\hyperlink{class_player}{Player}} has the option to split the Cards into two Hands and add a second card to each \mbox{\hyperlink{class_hand}{Hand}}. If this option is chosen, then the second \mbox{\hyperlink{class_card}{Card}} dealt is removed from the first \mbox{\hyperlink{class_hand}{Hand}} and is added to the second \mbox{\hyperlink{class_hand}{Hand}}, and an additional \mbox{\hyperlink{class_card}{Card}} is added to each. Then, two Cards are dealt to the Dealer. 
+Void. 
 \end{DoxyReturn}
 If the cards have the same value, then the \mbox{\hyperlink{class_player}{Player}} has the option to split the cards into two hands
 
@@ -117,13 +126,13 @@ Deal two cards to the dealer\mbox{\Hypertarget{class_table_a5c247f336ee82e2a4a58
 
 Method that allows a \mbox{\hyperlink{class_player}{Player}} to place a bet for one of their Hands. 
 
-
+Tells the \mbox{\hyperlink{class_player}{Player}} their total money via speech output, asks how much they would like to bet, checks to see if they have enough money to place the desired bet, and if so, adds the money to the bet and speaks the amount they have bet. If not, informs the \mbox{\hyperlink{class_player}{Player}} via speech that they cannot place the requested bet. Handles errors if the speech is unclear or invalid and therefore cannot be processed. 
 \begin{DoxyParams}{Parameters}
 {\em hand\+Name} & A string that signifies which \mbox{\hyperlink{class_hand}{Hand}} they are placing a bet for. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Tells the \mbox{\hyperlink{class_player}{Player}} their total money via speech output, asks how much they would like to bet, checks to see if they have enough money to place the desired bet, and if so, adds the money to the bet and speaks the amount they have bet. If not, informs the \mbox{\hyperlink{class_player}{Player}} via speech that they cannot place the requested bet. Handles errors if the speech is unclear or invalid and therefore cannot be processed. 
+Void. 
 \end{DoxyReturn}
 Outputs as voice the total money in the player\textquotesingle{}s hand
 
@@ -151,7 +160,7 @@ Notifies the user via speech output how much they have bet for the specific hand
 
 Method that allows a specified \mbox{\hyperlink{class_player}{Player}} to do a Hit, which is essentially adding the next \mbox{\hyperlink{class_card}{Card}} from the \mbox{\hyperlink{class_deck}{Deck}} to their \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Adds a card to the player\textquotesingle{}s hand. 
 \begin{DoxyParams}{Parameters}
 {\em player} & A pointer to the \mbox{\hyperlink{class_player}{Player}} object whose \mbox{\hyperlink{class_hand}{Hand}} is to be added to. \\
 \hline
@@ -166,13 +175,13 @@ Method that allows a specified \mbox{\hyperlink{class_player}{Player}} to do a H
 
 Method that outputs the Cards a \mbox{\hyperlink{class_player}{Player}} has in their \mbox{\hyperlink{class_hand}{Hand}} as speech. 
 
-
+Converts the face cards from their respective number values to J, Q, or K to more accurately represent a \mbox{\hyperlink{class_deck}{Deck}} of Cards. Loops through the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} until all Cards have been accounted for. Adds all of the Cards to a string. That string is then converted into speech output via the output\+As\+Voice method. 
 \begin{DoxyParams}{Parameters}
 {\em player} & A pointer to the \mbox{\hyperlink{class_player}{Player}} object whose \mbox{\hyperlink{class_hand}{Hand}} contents are to be returned. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Converts the face cards from their respective number values to J, Q, or K to more accurately represent a \mbox{\hyperlink{class_deck}{Deck}} of Cards. Loops through the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} until all Cards have been accounted for. Adds all of the Cards to a string. That string is then converted into speech output via the output\+As\+Voice method. 
+Void. 
 \end{DoxyReturn}
 Loops through all of the cards in the hand
 
@@ -188,7 +197,7 @@ Outputs the player\textquotesingle{}s hand name and the cards in the hand as voi
 
 Method that allows a Dealer to play their \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Method that notifies the \mbox{\hyperlink{class_player}{Player}} it is the Dealer\textquotesingle{}s turn to play. Places the desired bet. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn\textquotesingle{}t Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} to the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. If the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} has a higher value, they have won and the game is over and the user is notified of such. Adjusts the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s bet according to a win or a loss. 
 \begin{DoxyParams}{Parameters}
 {\em dealer} & A pointer to the dealer \mbox{\hyperlink{class_player}{Player}} object \\
 \hline
@@ -196,7 +205,7 @@ Method that allows a Dealer to play their \mbox{\hyperlink{class_hand}{Hand}}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Method that notifies the \mbox{\hyperlink{class_player}{Player}} it is the Dealer\textquotesingle{}s turn to play. Places the desired bet. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn\textquotesingle{}t Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} to the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. If the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} has a higher value, they have won and the game is over and the user is notified of such. Adjusts the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s bet according to a win or a loss. 
+Void. 
 \end{DoxyReturn}
 Voice output that notifies it is the dealer\textquotesingle{}s turn to play, and outputs the cards in the dealer\textquotesingle{}s hand
 
@@ -214,7 +223,7 @@ Every time a card is dealt to the Dealer, checks if the Dealer has Blackjack or 
 
 Method that allows a Dealer to play their \mbox{\hyperlink{class_hand}{Hand}} against a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s split \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Method that overrides the previous play\+Dealer method in the case that a \mbox{\hyperlink{class_player}{Player}} has split their hand and has 2 hands. It notifies the \mbox{\hyperlink{class_player}{Player}} it is the Dealer\textquotesingle{}s turn to play. Places the desired bets for both hands. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn\textquotesingle{}t Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of each of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} to the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. If the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} has a higher value, they have won and the game is over for that hand and the user is notified of such. Plays through until both hands have either won or lost. Adjusts the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s bets for each hand according to a win or a loss. 
 \begin{DoxyParams}{Parameters}
 {\em dealer} & A pointer to the dealer \mbox{\hyperlink{class_player}{Player}} object \\
 \hline
@@ -224,7 +233,7 @@ Method that allows a Dealer to play their \mbox{\hyperlink{class_hand}{Hand}} ag
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Method that overrides the previous play\+Dealer method in the case that a \mbox{\hyperlink{class_player}{Player}} has split their hand and has 2 hands. It notifies the \mbox{\hyperlink{class_player}{Player}} it is the Dealer\textquotesingle{}s turn to play. Places the desired bets for both hands. Continues to deal cards to the Dealer (hit) as long as the Dealer hasn\textquotesingle{}t Busted or won Blackjack. If the Dealer has won or lost, the user is notified of this via speech output. In this case, the game is over. Otherwise, compares the total of each of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} to the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. If the Dealer\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}} has a higher value, they have won and the game is over for that hand and the user is notified of such. Plays through until both hands have either won or lost. Adjusts the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s bets for each hand according to a win or a loss. 
+Void. 
 \end{DoxyReturn}
 Voice output that notifies it is the dealer\textquotesingle{}s turn to play, and outputs the cards in the dealer\textquotesingle{}s hand
 
@@ -252,13 +261,13 @@ Check if the dealer has won, if so, game over. Notify the user of loss via speec
 
 Method that allows a \mbox{\hyperlink{class_player}{Player}} to play their \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Method that notifies the \mbox{\hyperlink{class_player}{Player}} it is their turn to play via voice output, specifies if it is their second \mbox{\hyperlink{class_hand}{Hand}} that is playing, places the desired bet, asks them if they would like to stand (end their turn) or hit (be dealt another card), accepts voice input to determine which option they have picked, continues dealing cards until they have Busted, won Blackjack, or have chosen to Stand. A boolean variable keeps track of whether or not the game is over in the case of Busting or winning Blackjack. 
 \begin{DoxyParams}{Parameters}
 {\em hand} & A pointer to the \mbox{\hyperlink{class_player}{Player}} object representing the \mbox{\hyperlink{class_hand}{Hand}} that is to be played. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool. True if the \mbox{\hyperlink{class_player}{Player}} has won Blackjack or has Busted and the game is over, false if not. Method that notifies the \mbox{\hyperlink{class_player}{Player}} it is their turn to play via voice output, specifies if it is their second \mbox{\hyperlink{class_hand}{Hand}} that is playing, places the desired bet, asks them if they would like to stand (end their turn) or hit (be dealt another card), accepts voice input to determine which option they have picked, continues dealing cards until they have Busted, won Blackjack, or have chosen to Stand. A boolean variable keeps track of whether or not the game is over in the case of Busting or winning Blackjack. 
+bool. True if the \mbox{\hyperlink{class_player}{Player}} has won Blackjack or has Busted and the game is over, false if not. 
 \end{DoxyReturn}
 Notify user it is their turn to play, and specify if they are playing their second hand
 
@@ -284,7 +293,7 @@ Otherwise, keep asking if the player would like to stand or hit\mbox{\Hypertarge
 
 Method that starts the game, deals cards to the \mbox{\hyperlink{class_player}{Player}} and Dealer, and controls the order of \mbox{\hyperlink{class_player}{Player}} and Dealer turns. 
 
-\begin{DoxyReturn}{Returns}
+Method that initiates Blackjack. \begin{DoxyReturn}{Returns}
 Void. 
 \end{DoxyReturn}
 Voice output that welcomes the user to the game and notifies them the deck has been shuffled
@@ -336,5 +345,5 @@ Pointer that points to the bet \mbox{\Hypertarget{class_table_a920ca202fd1736f6a
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-models/Table.\+h\item 
+models/\mbox{\hyperlink{_table_8h}{Table.\+h}}\item 
 models/\mbox{\hyperlink{_table_8cpp}{Table.\+cpp}}\end{DoxyCompactItemize}

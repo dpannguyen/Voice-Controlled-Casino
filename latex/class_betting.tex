@@ -72,13 +72,13 @@ Destructor for a betting object.
 
 Allows a player to bet a specified amount of money during a round of Blackjack. 
 
-
+Subtracts the desired bet from the total amount of money the player has. 
 \begin{DoxyParams}{Parameters}
 {\em dat\+Money} & \mbox{\hyperlink{class_input}{Input}} is the desired denomination of money to be used as a bet. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Subtracts the desired bet from the total amount of money the player has. 
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_ae4b99d265b37ac36430a367e92af90f0}\label{class_betting_ae4b99d265b37ac36430a367e92af90f0}} 
 \index{Betting@{Betting}!betDatMoneySecondHand@{betDatMoneySecondHand}}
@@ -90,13 +90,13 @@ Void. Subtracts the desired bet from the total amount of money the player has.
 
 Allows a player to bet a specified amount of money for their second hand in the event of a split. 
 
-
+Assigns the amount of money to be bet for the second hand to the input value dat\+Money. Subtracts the desired bet from the total amount of money the player has. 
 \begin{DoxyParams}{Parameters}
 {\em dat\+Money} & \mbox{\hyperlink{class_input}{Input}} is the desired denomination of money to be used as a bet for the player\textquotesingle{}s second hand. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Void. Assigns the amount of money to be bet for the second hand to the input value dat\+Money. Subtracts the desired bet from the total amount of money the player has. 
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_a164464cf071054d403b706a21d8d1443}\label{class_betting_a164464cf071054d403b706a21d8d1443}} 
 \index{Betting@{Betting}!checkBetMoney@{checkBetMoney}}
@@ -108,7 +108,7 @@ Void. Assigns the amount of money to be bet for the second hand to the input val
 
 Checks if the player has enough money left to place a certain bet. 
 
-
+Checks if the amount of money a player wants to bet is less than the amount of money they have available. 
 \begin{DoxyParams}{Parameters}
 {\em money} & Takes in the player\textquotesingle{}s amount of money left as input. \\
 \hline
@@ -126,7 +126,7 @@ Bool. True if the player has enough money to place the bet, false if they do not
 
 Getter method that returns the amount of money a player has placed as a bet. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns the amount of money a player places as a bet. \begin{DoxyReturn}{Returns}
 Int. The amount of money a player places as a bet, as an integer. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_a86b13b59644eae3b4d079eef860b8241}\label{class_betting_a86b13b59644eae3b4d079eef860b8241}} 
@@ -139,7 +139,7 @@ Int. The amount of money a player places as a bet, as an integer.
 
 Getter method that returns the amount of money a player has placed as a bet in the case of a split for their second hand. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns the amount of money a player places as a bet for their second hand. \begin{DoxyReturn}{Returns}
 The amount of money a player places as a bet for their second hand. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_ac9f50335b520e01c1468568c04efa97f}\label{class_betting_ac9f50335b520e01c1468568c04efa97f}} 
@@ -152,7 +152,7 @@ The amount of money a player places as a bet for their second hand.
 
 Getter method that returns the amount of money a player has. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns the amount of money a player has. \begin{DoxyReturn}{Returns}
 Int. The amount of money a player has, as an integer. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_ab66659b468958cf91e8ed19b7fd2e482}\label{class_betting_ab66659b468958cf91e8ed19b7fd2e482}} 
@@ -165,8 +165,8 @@ Int. The amount of money a player has, as an integer.
 
 When the player has lost, resets the amount the player has bet to 0 for subsequent rounds. 
 
-\begin{DoxyReturn}{Returns}
-Void. The amount of the bet is set back to 0. No money is added to the player\textquotesingle{}s hand. 
+The amount of the bet is set back to 0. No money is added to the player\textquotesingle{}s hand. \begin{DoxyReturn}{Returns}
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_a9ed272867b92e0a131b22ce0519101c0}\label{class_betting_a9ed272867b92e0a131b22ce0519101c0}} 
 \index{Betting@{Betting}!loseMoneySecondHand@{loseMoneySecondHand}}
@@ -178,8 +178,8 @@ Void. The amount of the bet is set back to 0. No money is added to the player\te
 
 When the player has lost for their second hand, resets the amount the player has bet to 0 for subsequent rounds. 
 
-\begin{DoxyReturn}{Returns}
-Void. The amount of the bet for the second hand is set back to 0. No money is added to the player\textquotesingle{}s second hand. 
+The amount of the bet for the second hand is set back to 0. No money is added to the player\textquotesingle{}s second hand. \begin{DoxyReturn}{Returns}
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_ab01f63888ee70a785a80a23cb74827c1}\label{class_betting_ab01f63888ee70a785a80a23cb74827c1}} 
 \index{Betting@{Betting}!winMoney@{winMoney}}
@@ -191,8 +191,8 @@ Void. The amount of the bet for the second hand is set back to 0. No money is ad
 
 Adds money to a player\textquotesingle{}s total money when they win a round of Blackjack. 
 
-\begin{DoxyReturn}{Returns}
-Void. When a player wins, twice the amount that they bet is added to their total. This method also resets the betting amount for subsequent rounds. 
+When a player wins, twice the amount that they bet is added to their total. This method also resets the betting amount for subsequent rounds. \begin{DoxyReturn}{Returns}
+Void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_betting_a0fd9ab70f45f3ec5fad322e6304021f9}\label{class_betting_a0fd9ab70f45f3ec5fad322e6304021f9}} 
 \index{Betting@{Betting}!winMoneySecondHand@{winMoneySecondHand}}
@@ -204,8 +204,8 @@ Void. When a player wins, twice the amount that they bet is added to their total
 
 Adds money to a player\textquotesingle{}s total money in their second hand when they win a round of Blackjack. 
 
-\begin{DoxyReturn}{Returns}
-Void. When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. This method also resets the betting amount for the second hand for subsequent rounds. 
+When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. This method also resets the betting amount for the second hand for subsequent rounds. \begin{DoxyReturn}{Returns}
+Void. 
 \end{DoxyReturn}
 
 

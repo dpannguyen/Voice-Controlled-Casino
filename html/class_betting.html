@@ -178,13 +178,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allows a player to bet a specified amount of money during a round of Blackjack. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Subtracts the desired bet from the total amount of money the player has. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">datMoney</td><td><a class="el" href="class_input.html">Input</a> is the desired denomination of money to be used as a bet. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Subtracts the desired bet from the total amount of money the player has. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -205,13 +205,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allows a player to bet a specified amount of money for their second hand in the event of a split. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Assigns the amount of money to be bet for the second hand to the input value datMoney. Subtracts the desired bet from the total amount of money the player has. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">datMoney</td><td><a class="el" href="class_input.html">Input</a> is the desired denomination of money to be used as a bet for the player's second hand. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Void. Assigns the amount of money to be bet for the second hand to the input value datMoney. Subtracts the desired bet from the total amount of money the player has. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the player has enough money left to place a certain bet. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Checks if the amount of money a player wants to bet is less than the amount of money they have available. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">money</td><td>Takes in the player's amount of money left as input. </td></tr>
   </table>
@@ -258,7 +258,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter method that returns the amount of money a player has placed as a bet. </p>
-<dl class="section return"><dt>Returns</dt><dd>Int. The amount of money a player places as a bet, as an integer. </dd></dl>
+<p>Getter method that returns the amount of money a player places as a bet. </p><dl class="section return"><dt>Returns</dt><dd>Int. The amount of money a player places as a bet, as an integer. </dd></dl>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter method that returns the amount of money a player has placed as a bet in the case of a split for their second hand. </p>
-<dl class="section return"><dt>Returns</dt><dd>The amount of money a player places as a bet for their second hand. </dd></dl>
+<p>Getter method that returns the amount of money a player places as a bet for their second hand. </p><dl class="section return"><dt>Returns</dt><dd>The amount of money a player places as a bet for their second hand. </dd></dl>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter method that returns the amount of money a player has. </p>
-<dl class="section return"><dt>Returns</dt><dd>Int. The amount of money a player has, as an integer. </dd></dl>
+<p>Getter method that returns the amount of money a player has. </p><dl class="section return"><dt>Returns</dt><dd>Int. The amount of money a player has, as an integer. </dd></dl>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>When the player has lost, resets the amount the player has bet to 0 for subsequent rounds. </p>
-<dl class="section return"><dt>Returns</dt><dd>Void. The amount of the bet is set back to 0. No money is added to the player's hand. </dd></dl>
+<p>The amount of the bet is set back to 0. No money is added to the player's hand. </p><dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>When the player has lost for their second hand, resets the amount the player has bet to 0 for subsequent rounds. </p>
-<dl class="section return"><dt>Returns</dt><dd>Void. The amount of the bet for the second hand is set back to 0. No money is added to the player's second hand. </dd></dl>
+<p>The amount of the bet for the second hand is set back to 0. No money is added to the player's second hand. </p><dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds money to a player's total money when they win a round of Blackjack. </p>
-<dl class="section return"><dt>Returns</dt><dd>Void. When a player wins, twice the amount that they bet is added to their total. This method also resets the betting amount for subsequent rounds. </dd></dl>
+<p>When a player wins, twice the amount that they bet is added to their total. This method also resets the betting amount for subsequent rounds. </p><dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>
@@ -378,7 +378,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds money to a player's total money in their second hand when they win a round of Blackjack. </p>
-<dl class="section return"><dt>Returns</dt><dd>Void. When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. This method also resets the betting amount for the second hand for subsequent rounds. </dd></dl>
+<p>When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. This method also resets the betting amount for the second hand for subsequent rounds. </p><dl class="section return"><dt>Returns</dt><dd>Void. </dd></dl>
 
 </div>
 </div>

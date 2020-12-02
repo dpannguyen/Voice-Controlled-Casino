@@ -55,7 +55,7 @@ Constructor for a \mbox{\hyperlink{class_player}{Player}} object. \mbox{\Hyperta
 
 Constructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. 
 
-onstructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. 
+Constructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. 
 \begin{DoxyParams}{Parameters}
 {\em h} & The \mbox{\hyperlink{class_hand}{Hand}} object to be assigned to the \mbox{\hyperlink{class_player}{Player}}. \\
 \hline
@@ -83,7 +83,7 @@ Destructor for a \mbox{\hyperlink{class_player}{Player}} object.
 
 Method that adds a \mbox{\hyperlink{class_card}{Card}} object to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Method that adds a card to a player\textquotesingle{}s hand. 
 \begin{DoxyParams}{Parameters}
 {\em c} & \mbox{\hyperlink{class_card}{Card}} object to be added to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
 \hline
@@ -101,7 +101,7 @@ Void.
 
 Method that checks if a \mbox{\hyperlink{class_player}{Player}} has won Blackjack. 
 
-\begin{DoxyReturn}{Returns}
+Checks if a player has blackjack. \begin{DoxyReturn}{Returns}
 bool. True if the \mbox{\hyperlink{class_player}{Player}} has won, false if not. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_a6b52e89bdbc92a1f6bf0e8b1b87b91fc}\label{class_player_a6b52e89bdbc92a1f6bf0e8b1b87b91fc}} 
@@ -114,7 +114,7 @@ bool. True if the \mbox{\hyperlink{class_player}{Player}} has won, false if not.
 
 Method that checks if a \mbox{\hyperlink{class_player}{Player}} has busted. 
 
-\begin{DoxyReturn}{Returns}
+Checks if a player has busted. \begin{DoxyReturn}{Returns}
 bool. True if the \mbox{\hyperlink{class_player}{Player}} has busted, false if not. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_a4efa5889d3d3405a50153449aac5f312}\label{class_player_a4efa5889d3d3405a50153449aac5f312}} 
@@ -127,7 +127,7 @@ bool. True if the \mbox{\hyperlink{class_player}{Player}} has busted, false if n
 
 Method that returns a vector of the Cards in a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns the cards in the player\textquotesingle{}s hand. \begin{DoxyReturn}{Returns}
 vector$<$\+Card$>$. A vector of \mbox{\hyperlink{class_card}{Card}} objects that the \mbox{\hyperlink{class_player}{Player}} has in their \mbox{\hyperlink{class_hand}{Hand}}. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_a23d7327b4e73878e080eb823a71cbd52}\label{class_player_a23d7327b4e73878e080eb823a71cbd52}} 
@@ -140,7 +140,7 @@ vector$<$\+Card$>$. A vector of \mbox{\hyperlink{class_card}{Card}} objects that
 
 Getter method that returns the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns a hand\textquotesingle{}s name. \begin{DoxyReturn}{Returns}
 String representing the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_aa6dbdd07623d21ecd32ffbc378485c23}\label{class_player_aa6dbdd07623d21ecd32ffbc378485c23}} 
@@ -153,7 +153,7 @@ String representing the name of the \mbox{\hyperlink{class_player}{Player}}\text
 
 Getter method that returns the total value of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-\begin{DoxyReturn}{Returns}
+Getter method that returns a hand\textquotesingle{}s value. \begin{DoxyReturn}{Returns}
 Int representing the total value of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_ab8d8effea0beeaa8b867461ce1455cc2}\label{class_player_ab8d8effea0beeaa8b867461ce1455cc2}} 
@@ -166,7 +166,7 @@ Int representing the total value of the \mbox{\hyperlink{class_player}{Player}}\
 
 Method that removes the most recent card added from the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Method that removes the most recently added card from the player\textquotesingle{}s hand. 
 \begin{DoxyParams}{Parameters}
 {\em c} & \mbox{\hyperlink{class_card}{Card}} object to be removed from the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
 \hline
@@ -184,7 +184,7 @@ Void.
 
 Setter method that assigns a \mbox{\hyperlink{class_hand}{Hand}} to a \mbox{\hyperlink{class_player}{Player}}. 
 
-
+Setter method that initializes a player\textquotesingle{}s hand. 
 \begin{DoxyParams}{Parameters}
 {\em h} & The \mbox{\hyperlink{class_hand}{Hand}} object to be assigned to the \mbox{\hyperlink{class_player}{Player}}. \\
 \hline
@@ -202,7 +202,7 @@ Void.
 
 Setter method that assigns a name to a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
 
-
+Setter method that sets a hand\textquotesingle{}s name to an input string. 
 \begin{DoxyParams}{Parameters}
 {\em name} & String representing the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
 \hline
