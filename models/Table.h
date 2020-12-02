@@ -1,5 +1,5 @@
 /**
- * @file Table.cpp
+ * @file Table.h
  * @author Bridget Aine Hart , Zheng Frank Jiao , An Nguyen , Xuanran Qi , Christine Yang
  * @date December 2, 2020
  * @brief Header containing declarations that define a Table object that is used to play Blackjack.
