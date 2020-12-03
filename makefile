@@ -1,4 +1,4 @@
-SPEECHSDK_ROOT:=/change/to/point/to/extracted/SpeechSDK
+SPEECHSDK_ROOT:=/change/to/point/extracted/SpeechSDK
 
 TARGET_PLATFORM:=x86
 
