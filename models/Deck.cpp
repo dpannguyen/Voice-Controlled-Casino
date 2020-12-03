@@ -16,7 +16,7 @@ using namespace std;
 /**
  * Instance of deck object
  */
-Deck* Deck::deck_instance = NULL;
+Deck* Deck::deckInstance = NULL;
 
 /**
  * Constructor for a deck object.
@@ -39,10 +39,10 @@ Deck ::Deck()
  * @return Deck instance
  */ 
 Deck* Deck::instance() {
-	if (deck_instance == NULL) {
-		deck_instance = new Deck();
+	if (deckInstance == NULL) {
+		deckInstance = new Deck();
 	}
-	return deck_instance;
+	return deckInstance;
 }
 
 /**

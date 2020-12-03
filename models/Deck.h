@@ -21,7 +21,7 @@ class Deck
 private:
   /** @brief Constructor for a deck object that initializes a classic 52-card deck. */
   Deck();
-  static Deck* deck_instance; /**< instance of Deck object */
+  static Deck* deckInstance; /**< instance of Deck object */
   vector<Card> cards; /**< vector structure that contains cards */
   int pos;            /**< int variable that keeps track of position in a deck */
 
