@@ -1,0 +1,85 @@
+\hypertarget{class_input}{}\doxysection{Input Class Reference}
+\label{class_input}\index{Input@{Input}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_abae3f379d3f157cf42dc857309832dba}{Input}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_input}{Input}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_af2db35ba67c8a8ccd23bef6a482fc291}{$\sim$\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{class_input}{Input}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_input_aff93cd2fc94091f9c9d492fc0bb39d7c}{input\+From\+Voice}} ()
+\begin{DoxyCompactList}\small\item\em Method that processes human speech and returns it as a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_input_a1921955248b9c1156f3cf3fca67c7888}{input\+From\+String}} ()
+\begin{DoxyCompactList}\small\item\em Method that processes user text input and returns it as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_input_af468d22dd5716c1b7aefe9584afdbd76}{command}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_abae3f379d3f157cf42dc857309832dba}\label{class_input_abae3f379d3f157cf42dc857309832dba}} 
+\index{Input@{Input}!Input@{Input}}
+\index{Input@{Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for a \mbox{\hyperlink{class_input}{Input}} object. 
+
+Constructor for a \mbox{\hyperlink{class_input}{Input}} object. \mbox{\Hypertarget{class_input_af2db35ba67c8a8ccd23bef6a482fc291}\label{class_input_af2db35ba67c8a8ccd23bef6a482fc291}} 
+\index{Input@{Input}!````~Input@{$\sim$Input}}
+\index{````~Input@{$\sim$Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{$\sim$Input()}{~Input()}}
+{\footnotesize\ttfamily Input\+::$\sim$\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for a \mbox{\hyperlink{class_input}{Input}} object. 
+
+Destructor for a \mbox{\hyperlink{class_input}{Input}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_a1921955248b9c1156f3cf3fca67c7888}\label{class_input_a1921955248b9c1156f3cf3fca67c7888}} 
+\index{Input@{Input}!inputFromString@{inputFromString}}
+\index{inputFromString@{inputFromString}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{inputFromString()}{inputFromString()}}
+{\footnotesize\ttfamily string Input\+::input\+From\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that processes user text input and returns it as a string. 
+
+Uses standard cin to collect input from the command line from a user, and return it as a string. \begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_aff93cd2fc94091f9c9d492fc0bb39d7c}\label{class_input_aff93cd2fc94091f9c9d492fc0bb39d7c}} 
+\index{Input@{Input}!inputFromVoice@{inputFromVoice}}
+\index{inputFromVoice@{inputFromVoice}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{inputFromVoice()}{inputFromVoice()}}
+{\footnotesize\ttfamily string Input\+::input\+From\+Voice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that processes human speech and returns it as a string. 
+
+Uses the Microsoft Speech A\+PI to recognize a human voice, and processes that sound into words that are outputted in the form of a string. \begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_input_af468d22dd5716c1b7aefe9584afdbd76}\label{class_input_af468d22dd5716c1b7aefe9584afdbd76}} 
+\index{Input@{Input}!command@{command}}
+\index{command@{command}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily std\+::string Input\+::command\hspace{0.3cm}{\ttfamily [private]}}
+
+string containing the user\textquotesingle{}s input 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+models/\mbox{\hyperlink{_input_8h}{Input.\+h}}\item 
+models/\mbox{\hyperlink{_input_8cpp}{Input.\+cpp}}\end{DoxyCompactItemize}

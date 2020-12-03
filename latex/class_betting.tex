@@ -1,0 +1,236 @@
+\hypertarget{class_betting}{}\doxysection{Betting Class Reference}
+\label{class_betting}\index{Betting@{Betting}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_betting_a6f03217a782deb9264d8b19f1b528ffd}{Betting}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a betting object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_betting_ac69a0dd6145819d696d3f3d4527e359b}{$\sim$\+Betting}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a betting object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_betting_ac9f50335b520e01c1468568c04efa97f}{get\+Human\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Getter method that returns the amount of money a player has. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_betting_af9f2f3ecfcdbb29e88e3060be60d7bc8}{get\+Bet\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Getter method that returns the amount of money a player has placed as a bet. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_betting_a86b13b59644eae3b4d079eef860b8241}{get\+Bet\+Money\+Second\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Getter method that returns the amount of money a player has placed as a bet in the case of a split for their second hand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_betting_a164464cf071054d403b706a21d8d1443}{check\+Bet\+Money}} (int money)
+\begin{DoxyCompactList}\small\item\em Checks if the player has enough money left to place a certain bet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_a5f9c94e9dcde119d169b290ca39734fd}{bet\+Dat\+Money}} (int dat\+Money)
+\begin{DoxyCompactList}\small\item\em Allows a player to bet a specified amount of money during a round of Blackjack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_ae4b99d265b37ac36430a367e92af90f0}{bet\+Dat\+Money\+Second\+Hand}} (int dat\+Money)
+\begin{DoxyCompactList}\small\item\em Allows a player to bet a specified amount of money for their second hand in the event of a split. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_ab01f63888ee70a785a80a23cb74827c1}{win\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Adds money to a player\textquotesingle{}s total money when they win a round of Blackjack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_a0fd9ab70f45f3ec5fad322e6304021f9}{win\+Money\+Second\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Adds money to a player\textquotesingle{}s total money in their second hand when they win a round of Blackjack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_ab66659b468958cf91e8ed19b7fd2e482}{lose\+Money}} ()
+\begin{DoxyCompactList}\small\item\em When the player has lost, resets the amount the player has bet to 0 for subsequent rounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_betting_a9ed272867b92e0a131b22ce0519101c0}{lose\+Money\+Second\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em When the player has lost for their second hand, resets the amount the player has bet to 0 for subsequent rounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_betting_a86765a077e38782022e7f9dffa6527e3}{human\+Money}}
+\item 
+int \mbox{\hyperlink{class_betting_a5d1d95eb756d1b1510191ed76f126590}{bet\+Money}}
+\item 
+int \mbox{\hyperlink{class_betting_a511437d7e0738ee31fee21908265c68e}{bet\+Money\+Second\+Hand}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_betting_a6f03217a782deb9264d8b19f1b528ffd}\label{class_betting_a6f03217a782deb9264d8b19f1b528ffd}} 
+\index{Betting@{Betting}!Betting@{Betting}}
+\index{Betting@{Betting}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{Betting()}{Betting()}}
+{\footnotesize\ttfamily Betting\+::\+Betting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for a betting object. 
+
+Initializes money that the player currently has. The default is 5000. Initializes bet\+Money (the money player places as a bet during a round) to 0. Initializes bet\+Money\+Second\+Hand (the money player places as a bet when their hand has been split) to 0. \mbox{\Hypertarget{class_betting_ac69a0dd6145819d696d3f3d4527e359b}\label{class_betting_ac69a0dd6145819d696d3f3d4527e359b}} 
+\index{Betting@{Betting}!````~Betting@{$\sim$Betting}}
+\index{````~Betting@{$\sim$Betting}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{$\sim$Betting()}{~Betting()}}
+{\footnotesize\ttfamily Betting\+::$\sim$\+Betting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for a betting object. 
+
+\mbox{\hyperlink{class_betting}{Betting}} object destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_betting_a5f9c94e9dcde119d169b290ca39734fd}\label{class_betting_a5f9c94e9dcde119d169b290ca39734fd}} 
+\index{Betting@{Betting}!betDatMoney@{betDatMoney}}
+\index{betDatMoney@{betDatMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{betDatMoney()}{betDatMoney()}}
+{\footnotesize\ttfamily void Betting\+::bet\+Dat\+Money (\begin{DoxyParamCaption}\item[{int}]{dat\+Money }\end{DoxyParamCaption})}
+
+
+
+Allows a player to bet a specified amount of money during a round of Blackjack. 
+
+Subtracts the desired bet from the total amount of money the player has. 
+\begin{DoxyParams}{Parameters}
+{\em dat\+Money} & \mbox{\hyperlink{class_input}{Input}} is the desired denomination of money to be used as a bet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_ae4b99d265b37ac36430a367e92af90f0}\label{class_betting_ae4b99d265b37ac36430a367e92af90f0}} 
+\index{Betting@{Betting}!betDatMoneySecondHand@{betDatMoneySecondHand}}
+\index{betDatMoneySecondHand@{betDatMoneySecondHand}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{betDatMoneySecondHand()}{betDatMoneySecondHand()}}
+{\footnotesize\ttfamily void Betting\+::bet\+Dat\+Money\+Second\+Hand (\begin{DoxyParamCaption}\item[{int}]{dat\+Money }\end{DoxyParamCaption})}
+
+
+
+Allows a player to bet a specified amount of money for their second hand in the event of a split. 
+
+Assigns the amount of money to be bet for the second hand to the input value dat\+Money. Subtracts the desired bet from the total amount of money the player has. 
+\begin{DoxyParams}{Parameters}
+{\em dat\+Money} & \mbox{\hyperlink{class_input}{Input}} is the desired denomination of money to be used as a bet for the player\textquotesingle{}s second hand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_a164464cf071054d403b706a21d8d1443}\label{class_betting_a164464cf071054d403b706a21d8d1443}} 
+\index{Betting@{Betting}!checkBetMoney@{checkBetMoney}}
+\index{checkBetMoney@{checkBetMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{checkBetMoney()}{checkBetMoney()}}
+{\footnotesize\ttfamily bool Betting\+::check\+Bet\+Money (\begin{DoxyParamCaption}\item[{int}]{money }\end{DoxyParamCaption})}
+
+
+
+Checks if the player has enough money left to place a certain bet. 
+
+Checks if the amount of money a player wants to bet is less than the amount of money they have available. 
+\begin{DoxyParams}{Parameters}
+{\em money} & Takes in the player\textquotesingle{}s amount of money left as input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool. True if the player has enough money to place the bet, false if they do not have enough money to place the bet. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_af9f2f3ecfcdbb29e88e3060be60d7bc8}\label{class_betting_af9f2f3ecfcdbb29e88e3060be60d7bc8}} 
+\index{Betting@{Betting}!getBetMoney@{getBetMoney}}
+\index{getBetMoney@{getBetMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{getBetMoney()}{getBetMoney()}}
+{\footnotesize\ttfamily int Betting\+::get\+Bet\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method that returns the amount of money a player has placed as a bet. 
+
+Getter method that returns the amount of money a player places as a bet. \begin{DoxyReturn}{Returns}
+Int. The amount of money a player places as a bet, as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_a86b13b59644eae3b4d079eef860b8241}\label{class_betting_a86b13b59644eae3b4d079eef860b8241}} 
+\index{Betting@{Betting}!getBetMoneySecondHand@{getBetMoneySecondHand}}
+\index{getBetMoneySecondHand@{getBetMoneySecondHand}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{getBetMoneySecondHand()}{getBetMoneySecondHand()}}
+{\footnotesize\ttfamily int Betting\+::get\+Bet\+Money\+Second\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method that returns the amount of money a player has placed as a bet in the case of a split for their second hand. 
+
+Getter method that returns the amount of money a player places as a bet for their second hand. \begin{DoxyReturn}{Returns}
+The amount of money a player places as a bet for their second hand. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_ac9f50335b520e01c1468568c04efa97f}\label{class_betting_ac9f50335b520e01c1468568c04efa97f}} 
+\index{Betting@{Betting}!getHumanMoney@{getHumanMoney}}
+\index{getHumanMoney@{getHumanMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{getHumanMoney()}{getHumanMoney()}}
+{\footnotesize\ttfamily int Betting\+::get\+Human\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method that returns the amount of money a player has. 
+
+Getter method that returns the amount of money a player has. \begin{DoxyReturn}{Returns}
+Int. The amount of money a player has, as an integer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_ab66659b468958cf91e8ed19b7fd2e482}\label{class_betting_ab66659b468958cf91e8ed19b7fd2e482}} 
+\index{Betting@{Betting}!loseMoney@{loseMoney}}
+\index{loseMoney@{loseMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{loseMoney()}{loseMoney()}}
+{\footnotesize\ttfamily void Betting\+::lose\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+When the player has lost, resets the amount the player has bet to 0 for subsequent rounds. 
+
+The amount of the bet is set back to 0. No money is added to the player\textquotesingle{}s hand. \begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_a9ed272867b92e0a131b22ce0519101c0}\label{class_betting_a9ed272867b92e0a131b22ce0519101c0}} 
+\index{Betting@{Betting}!loseMoneySecondHand@{loseMoneySecondHand}}
+\index{loseMoneySecondHand@{loseMoneySecondHand}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{loseMoneySecondHand()}{loseMoneySecondHand()}}
+{\footnotesize\ttfamily void Betting\+::lose\+Money\+Second\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+When the player has lost for their second hand, resets the amount the player has bet to 0 for subsequent rounds. 
+
+The amount of the bet for the second hand is set back to 0. No money is added to the player\textquotesingle{}s second hand. \begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_ab01f63888ee70a785a80a23cb74827c1}\label{class_betting_ab01f63888ee70a785a80a23cb74827c1}} 
+\index{Betting@{Betting}!winMoney@{winMoney}}
+\index{winMoney@{winMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{winMoney()}{winMoney()}}
+{\footnotesize\ttfamily void Betting\+::win\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds money to a player\textquotesingle{}s total money when they win a round of Blackjack. 
+
+When a player wins, twice the amount that they bet is added to their total. This method also resets the betting amount for subsequent rounds. \begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_betting_a0fd9ab70f45f3ec5fad322e6304021f9}\label{class_betting_a0fd9ab70f45f3ec5fad322e6304021f9}} 
+\index{Betting@{Betting}!winMoneySecondHand@{winMoneySecondHand}}
+\index{winMoneySecondHand@{winMoneySecondHand}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{winMoneySecondHand()}{winMoneySecondHand()}}
+{\footnotesize\ttfamily void Betting\+::win\+Money\+Second\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds money to a player\textquotesingle{}s total money in their second hand when they win a round of Blackjack. 
+
+When a player wins for their second hand, twice the amount that they bet is added to their total for their second hand. This method also resets the betting amount for the second hand for subsequent rounds. \begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_betting_a5d1d95eb756d1b1510191ed76f126590}\label{class_betting_a5d1d95eb756d1b1510191ed76f126590}} 
+\index{Betting@{Betting}!betMoney@{betMoney}}
+\index{betMoney@{betMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{betMoney}{betMoney}}
+{\footnotesize\ttfamily int Betting\+::bet\+Money\hspace{0.3cm}{\ttfamily [private]}}
+
+Integer variable that contains the amount of money the player chooses to bet during a round \mbox{\Hypertarget{class_betting_a511437d7e0738ee31fee21908265c68e}\label{class_betting_a511437d7e0738ee31fee21908265c68e}} 
+\index{Betting@{Betting}!betMoneySecondHand@{betMoneySecondHand}}
+\index{betMoneySecondHand@{betMoneySecondHand}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{betMoneySecondHand}{betMoneySecondHand}}
+{\footnotesize\ttfamily int Betting\+::bet\+Money\+Second\+Hand\hspace{0.3cm}{\ttfamily [private]}}
+
+Integer variable that contains the amount of money the player chooses to bet for their second hand during a round \mbox{\Hypertarget{class_betting_a86765a077e38782022e7f9dffa6527e3}\label{class_betting_a86765a077e38782022e7f9dffa6527e3}} 
+\index{Betting@{Betting}!humanMoney@{humanMoney}}
+\index{humanMoney@{humanMoney}!Betting@{Betting}}
+\doxysubsubsection{\texorpdfstring{humanMoney}{humanMoney}}
+{\footnotesize\ttfamily int Betting\+::human\+Money\hspace{0.3cm}{\ttfamily [private]}}
+
+Integer variable that contains the amount of money the player currently has 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+models/\mbox{\hyperlink{_betting_8h}{Betting.\+h}}\item 
+models/\mbox{\hyperlink{_betting_8cpp}{Betting.\+cpp}}\end{DoxyCompactItemize}

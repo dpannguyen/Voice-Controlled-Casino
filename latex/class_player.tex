@@ -1,0 +1,227 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_player}{Player}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_a7294c243f2c427b15e3cc000dc91bfaf}{Player}} (\mbox{\hyperlink{class_hand}{Hand}} h)
+\begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{class_player}{Player}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_af2c29064f84e088d3df9025ccf200130}{set\+Hand}} (\mbox{\hyperlink{class_hand}{Hand}} h)
+\begin{DoxyCompactList}\small\item\em Setter method that assigns a \mbox{\hyperlink{class_hand}{Hand}} to a \mbox{\hyperlink{class_player}{Player}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_aa6dbdd07623d21ecd32ffbc378485c23}{get\+Hand\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Getter method that returns the total value of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_a23d7327b4e73878e080eb823a71cbd52}{get\+Hand\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Getter method that returns the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a6932a08a89e8216baeed6def489e5909}{set\+Hand\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Setter method that assigns a name to a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a73435c93ddaab1e82526c9ecce1c2615}{add\+Card\+To\+Hand}} (\mbox{\hyperlink{class_card}{Card}} c)
+\begin{DoxyCompactList}\small\item\em Method that adds a \mbox{\hyperlink{class_card}{Card}} object to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ab8d8effea0beeaa8b867461ce1455cc2}{remove\+Last\+Card\+From\+Hand}} (\mbox{\hyperlink{class_card}{Card}} c)
+\begin{DoxyCompactList}\small\item\em Method that removes the most recent card added from the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a6b52e89bdbc92a1f6bf0e8b1b87b91fc}{check\+Bust}} ()
+\begin{DoxyCompactList}\small\item\em Method that checks if a \mbox{\hyperlink{class_player}{Player}} has busted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_aa6e883aff1d95feff7d7c55c71ce17bf}{check\+Blackjack}} ()
+\begin{DoxyCompactList}\small\item\em Method that checks if a \mbox{\hyperlink{class_player}{Player}} has won Blackjack. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_a4efa5889d3d3405a50153449aac5f312}{get\+Hand\+Cards}} ()
+\begin{DoxyCompactList}\small\item\em Method that returns a vector of the Cards in a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hand}{Hand}} \mbox{\hyperlink{class_player_a2cada0240d99fc95d049d691f926c1dd}{hand}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for a \mbox{\hyperlink{class_player}{Player}} object. 
+
+Constructor for a \mbox{\hyperlink{class_player}{Player}} object. \mbox{\Hypertarget{class_player_a7294c243f2c427b15e3cc000dc91bfaf}\label{class_player_a7294c243f2c427b15e3cc000dc91bfaf}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hand}{Hand}}}]{h }\end{DoxyParamCaption})}
+
+
+
+Constructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Constructor for a \mbox{\hyperlink{class_player}{Player}} object that initializes a \mbox{\hyperlink{class_player}{Player}} with a \mbox{\hyperlink{class_hand}{Hand}}. 
+\begin{DoxyParams}{Parameters}
+{\em h} & The \mbox{\hyperlink{class_hand}{Hand}} object to be assigned to the \mbox{\hyperlink{class_player}{Player}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{$\sim$Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for a \mbox{\hyperlink{class_player}{Player}} object. 
+
+Destructor for a \mbox{\hyperlink{class_player}{Player}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a73435c93ddaab1e82526c9ecce1c2615}\label{class_player_a73435c93ddaab1e82526c9ecce1c2615}} 
+\index{Player@{Player}!addCardToHand@{addCardToHand}}
+\index{addCardToHand@{addCardToHand}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{addCardToHand()}{addCardToHand()}}
+{\footnotesize\ttfamily void Player\+::add\+Card\+To\+Hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Method that adds a \mbox{\hyperlink{class_card}{Card}} object to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Method that adds a card to a player\textquotesingle{}s hand. 
+\begin{DoxyParams}{Parameters}
+{\em c} & \mbox{\hyperlink{class_card}{Card}} object to be added to the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_aa6e883aff1d95feff7d7c55c71ce17bf}\label{class_player_aa6e883aff1d95feff7d7c55c71ce17bf}} 
+\index{Player@{Player}!checkBlackjack@{checkBlackjack}}
+\index{checkBlackjack@{checkBlackjack}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{checkBlackjack()}{checkBlackjack()}}
+{\footnotesize\ttfamily bool Player\+::check\+Blackjack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that checks if a \mbox{\hyperlink{class_player}{Player}} has won Blackjack. 
+
+Checks if a player has blackjack. \begin{DoxyReturn}{Returns}
+bool. True if the \mbox{\hyperlink{class_player}{Player}} has won, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a6b52e89bdbc92a1f6bf0e8b1b87b91fc}\label{class_player_a6b52e89bdbc92a1f6bf0e8b1b87b91fc}} 
+\index{Player@{Player}!checkBust@{checkBust}}
+\index{checkBust@{checkBust}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{checkBust()}{checkBust()}}
+{\footnotesize\ttfamily bool Player\+::check\+Bust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that checks if a \mbox{\hyperlink{class_player}{Player}} has busted. 
+
+Checks if a player has busted. \begin{DoxyReturn}{Returns}
+bool. True if the \mbox{\hyperlink{class_player}{Player}} has busted, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a4efa5889d3d3405a50153449aac5f312}\label{class_player_a4efa5889d3d3405a50153449aac5f312}} 
+\index{Player@{Player}!getHandCards@{getHandCards}}
+\index{getHandCards@{getHandCards}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getHandCards()}{getHandCards()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ Player\+::get\+Hand\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that returns a vector of the Cards in a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Getter method that returns the cards in the player\textquotesingle{}s hand. \begin{DoxyReturn}{Returns}
+vector$<$\+Card$>$. A vector of \mbox{\hyperlink{class_card}{Card}} objects that the \mbox{\hyperlink{class_player}{Player}} has in their \mbox{\hyperlink{class_hand}{Hand}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a23d7327b4e73878e080eb823a71cbd52}\label{class_player_a23d7327b4e73878e080eb823a71cbd52}} 
+\index{Player@{Player}!getHandName@{getHandName}}
+\index{getHandName@{getHandName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getHandName()}{getHandName()}}
+{\footnotesize\ttfamily string Player\+::get\+Hand\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method that returns the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Getter method that returns a hand\textquotesingle{}s name. \begin{DoxyReturn}{Returns}
+String representing the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_aa6dbdd07623d21ecd32ffbc378485c23}\label{class_player_aa6dbdd07623d21ecd32ffbc378485c23}} 
+\index{Player@{Player}!getHandTotal@{getHandTotal}}
+\index{getHandTotal@{getHandTotal}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getHandTotal()}{getHandTotal()}}
+{\footnotesize\ttfamily int Player\+::get\+Hand\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter method that returns the total value of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Getter method that returns a hand\textquotesingle{}s value. \begin{DoxyReturn}{Returns}
+Int representing the total value of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_ab8d8effea0beeaa8b867461ce1455cc2}\label{class_player_ab8d8effea0beeaa8b867461ce1455cc2}} 
+\index{Player@{Player}!removeLastCardFromHand@{removeLastCardFromHand}}
+\index{removeLastCardFromHand@{removeLastCardFromHand}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{removeLastCardFromHand()}{removeLastCardFromHand()}}
+{\footnotesize\ttfamily void Player\+::remove\+Last\+Card\+From\+Hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Method that removes the most recent card added from the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Method that removes the most recently added card from the player\textquotesingle{}s hand. 
+\begin{DoxyParams}{Parameters}
+{\em c} & \mbox{\hyperlink{class_card}{Card}} object to be removed from the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_af2c29064f84e088d3df9025ccf200130}\label{class_player_af2c29064f84e088d3df9025ccf200130}} 
+\index{Player@{Player}!setHand@{setHand}}
+\index{setHand@{setHand}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setHand()}{setHand()}}
+{\footnotesize\ttfamily void Player\+::set\+Hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hand}{Hand}}}]{h }\end{DoxyParamCaption})}
+
+
+
+Setter method that assigns a \mbox{\hyperlink{class_hand}{Hand}} to a \mbox{\hyperlink{class_player}{Player}}. 
+
+Setter method that initializes a player\textquotesingle{}s hand. 
+\begin{DoxyParams}{Parameters}
+{\em h} & The \mbox{\hyperlink{class_hand}{Hand}} object to be assigned to the \mbox{\hyperlink{class_player}{Player}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a6932a08a89e8216baeed6def489e5909}\label{class_player_a6932a08a89e8216baeed6def489e5909}} 
+\index{Player@{Player}!setHandName@{setHandName}}
+\index{setHandName@{setHandName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setHandName()}{setHandName()}}
+{\footnotesize\ttfamily void Player\+::set\+Hand\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Setter method that assigns a name to a \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Setter method that sets a hand\textquotesingle{}s name to an input string. 
+\begin{DoxyParams}{Parameters}
+{\em name} & String representing the name of the \mbox{\hyperlink{class_player}{Player}}\textquotesingle{}s \mbox{\hyperlink{class_hand}{Hand}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a2cada0240d99fc95d049d691f926c1dd}\label{class_player_a2cada0240d99fc95d049d691f926c1dd}} 
+\index{Player@{Player}!hand@{hand}}
+\index{hand@{hand}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{hand}{hand}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hand}{Hand}} Player\+::hand\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_hand}{Hand}} object that is used throughout the player class, to be assigned to a player 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+models/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+models/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

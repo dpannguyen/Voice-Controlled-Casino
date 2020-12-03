@@ -1,0 +1,48 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Installation Steps}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Install these packages
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get update}
+\DoxyCodeLine{sudo apt-\/get install build-\/essential libssl1.0.0 libasound2 wget}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item If libssl1.\+0.\+0 is not available, install libssl1.\+0.\+x (where x is greater than 0) or libssl1.\+1 instead.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Build the game}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Download and extract the Speech S\+DK
+\begin{DoxyItemize}
+\item {\bfseries{By downloading the Microsoft Cognitive Services Speech S\+DK, you acknowledge its license, see \href{https://aka.ms/csspeech/license201809}{\texttt{ Speech S\+DK license agreement}}.}}
+\item Run the following commands after replacing the string {\ttfamily /your/path} with a directory (absolute path) of where the Speech\+S\+DK dir\+:
+
+\`{}\`{}\`{}sh export S\+P\+E\+E\+C\+H\+S\+D\+K\+\_\+\+R\+O\+OT=\char`\"{}/your/path\char`\"{} mkdir -\/p \char`\"{}\$\+S\+P\+E\+E\+C\+H\+S\+D\+K\+\_\+\+R\+O\+O\+T\char`\"{} wget -\/O Speech\+S\+D\+K-\/\+Linux.\+tar.\+gz \href{https://aka.ms/csspeech/linuxbinary}{\texttt{ https\+://aka.\+ms/csspeech/linuxbinary}} tar --strip 1 -\/xzf Speech\+S\+D\+K-\/\+Linux.\+tar.\+gz -\/C \char`\"{}\$\+S\+P\+E\+E\+C\+H\+S\+D\+K\+\_\+\+R\+O\+O\+T\char`\"{} \`{}\`{}\`{}
+\end{DoxyItemize}
+\item Navigate to the directory of the Makefile of this repository
+\item Edit the file {\ttfamily Makefile}\+:
+\begin{DoxyItemize}
+\item In the line {\ttfamily S\+P\+E\+E\+C\+H\+S\+D\+K\+\_\+\+R\+O\+OT\+:=/change/to/point/to/extracted/\+Speech\+S\+DK} change the right-\/hand side to point to the location of your extract Speech S\+DK for Linux.
+\end{DoxyItemize}
+\item Run the command {\ttfamily make} to build the sample, the resulting executable will be called {\ttfamily blackjack}.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Run the sample}\label{md__r_e_a_d_m_e_autotoc_md3}
+To run the game, you\textquotesingle{}ll need to configure the loader\textquotesingle{}s library path to point to the Speech S\+DK library.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export LD\_LIBRARY\_PATH="{}\$LD\_LIBRARY\_PATH:\$SPEECHSDK\_ROOT/lib/x86"{}}
+\end{DoxyCode}
+
+
+Run the game\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./blackjack}
+\end{DoxyCode}
+ 

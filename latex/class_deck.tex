@@ -1,0 +1,116 @@
+\hypertarget{class_deck}{}\doxysection{Deck Class Reference}
+\label{class_deck}\index{Deck@{Deck}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99}{Deck}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a deck object that initializes a classic 52-\/card deck. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_deck_a7d1331cc558c302fdf44e5ae8aae1a95}{$\sim$\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a deck object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}{shuffle\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em Method that shuffles a classic 52-\/card deck. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_deck_aa3fc7649d30d80846fd530831c227895}{get\+Next\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Method that returns the next \mbox{\hyperlink{class_card}{Card}} object from the \mbox{\hyperlink{class_deck}{Deck}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_deck_ade16d60b05605080b4c8aeaafa735812}{my\+Rand}} (int i)
+\begin{DoxyCompactList}\small\item\em Helper function that returns a random integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_deck_a1dd171aef1d4d37679a368113be72447}{cards}}
+\item 
+int \mbox{\hyperlink{class_deck_a6748197fc003120b1653bbd56a3db469}{pos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99}\label{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99}} 
+\index{Deck@{Deck}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}}
+{\footnotesize\ttfamily Deck\+::\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for a deck object that initializes a classic 52-\/card deck. 
+
+Constructor for a deck object. \mbox{\Hypertarget{class_deck_a7d1331cc558c302fdf44e5ae8aae1a95}\label{class_deck_a7d1331cc558c302fdf44e5ae8aae1a95}} 
+\index{Deck@{Deck}!````~Deck@{$\sim$Deck}}
+\index{````~Deck@{$\sim$Deck}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{$\sim$Deck()}{~Deck()}}
+{\footnotesize\ttfamily Deck\+::$\sim$\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for a deck object. 
+
+Destructor for a deck object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_deck_aa3fc7649d30d80846fd530831c227895}\label{class_deck_aa3fc7649d30d80846fd530831c227895}} 
+\index{Deck@{Deck}!getNextCard@{getNextCard}}
+\index{getNextCard@{getNextCard}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{getNextCard()}{getNextCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Deck\+::get\+Next\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that returns the next \mbox{\hyperlink{class_card}{Card}} object from the \mbox{\hyperlink{class_deck}{Deck}}. 
+
+Returns the next card and increments the position in the \mbox{\hyperlink{class_deck}{Deck}} accordingly. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_card}{Card}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_deck_ade16d60b05605080b4c8aeaafa735812}\label{class_deck_ade16d60b05605080b4c8aeaafa735812}} 
+\index{Deck@{Deck}!myRand@{myRand}}
+\index{myRand@{myRand}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{myRand()}{myRand()}}
+{\footnotesize\ttfamily int Deck\+::my\+Rand (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper function that returns a random integer. 
+
+Helper function that returns a random integer. 
+\begin{DoxyParams}{Parameters}
+{\em i} & An integer value of the current time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random integer value generated from an integer of the current time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}\label{class_deck_a44577729d5b8cc5f5b416adb46ac3cd5}} 
+\index{Deck@{Deck}!shuffleDeck@{shuffleDeck}}
+\index{shuffleDeck@{shuffleDeck}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{shuffleDeck()}{shuffleDeck()}}
+{\footnotesize\ttfamily void Deck\+::shuffle\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that shuffles a classic 52-\/card deck. 
+
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_deck_a1dd171aef1d4d37679a368113be72447}\label{class_deck_a1dd171aef1d4d37679a368113be72447}} 
+\index{Deck@{Deck}!cards@{cards}}
+\index{cards@{cards}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{cards}{cards}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_card}{Card}}$>$ Deck\+::cards\hspace{0.3cm}{\ttfamily [private]}}
+
+vector structure that contains cards \mbox{\Hypertarget{class_deck_a6748197fc003120b1653bbd56a3db469}\label{class_deck_a6748197fc003120b1653bbd56a3db469}} 
+\index{Deck@{Deck}!pos@{pos}}
+\index{pos@{pos}!Deck@{Deck}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily int Deck\+::pos\hspace{0.3cm}{\ttfamily [private]}}
+
+int variable that keeps track of position in a deck 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+models/\mbox{\hyperlink{_deck_8h}{Deck.\+h}}\item 
+models/\mbox{\hyperlink{_deck_8cpp}{Deck.\+cpp}}\end{DoxyCompactItemize}

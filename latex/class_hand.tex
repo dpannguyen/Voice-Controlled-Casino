@@ -1,0 +1,173 @@
+\hypertarget{class_hand}{}\doxysection{Hand Class Reference}
+\label{class_hand}\index{Hand@{Hand}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hand_aa733faf150351c640fc7d1bf460b07e9}{Hand}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_hand}{Hand}} object that initializes total\+Value to 0 and the hand\+Name to \char`\"{}hand\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hand_a68be14022a1bcf6218c12f8ef5ecf0f0}\label{class_hand_a68be14022a1bcf6218c12f8ef5ecf0f0}} 
+\mbox{\hyperlink{class_hand_a68be14022a1bcf6218c12f8ef5ecf0f0}{Hand}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor for a \mbox{\hyperlink{class_hand}{Hand}} object that initializes total\+Value to 0 and initializes the name to an input string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hand_a7ff29a6f23f98c5e57f44d23a76912be}{$\sim$\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{class_hand}{Hand}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hand_a5082f6d3c0763e6c31acefa7a38af504}\label{class_hand_a5082f6d3c0763e6c31acefa7a38af504}} 
+std\+::vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_hand_a5082f6d3c0763e6c31acefa7a38af504}{get\+Cards}} ()
+\begin{DoxyCompactList}\small\item\em getter method that returns the cards in a hand \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hand_ad4a7989f68515bf7f706f0042c779395}\label{class_hand_ad4a7989f68515bf7f706f0042c779395}} 
+int \mbox{\hyperlink{class_hand_ad4a7989f68515bf7f706f0042c779395}{get\+Total\+Value}} ()
+\begin{DoxyCompactList}\small\item\em getter method that returns the total value of the cards in a hand \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hand_ab57371e0b548d5d4baeb0b9a0e9ddc27}\label{class_hand_ab57371e0b548d5d4baeb0b9a0e9ddc27}} 
+std\+::string \mbox{\hyperlink{class_hand_ab57371e0b548d5d4baeb0b9a0e9ddc27}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em getter method that returns the name of a hand \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_a8a3ed41baea1af51d96accc7a31ac0b9}{add\+Card}} (\mbox{\hyperlink{class_card}{Card}} new\+Card)
+\begin{DoxyCompactList}\small\item\em Method that adds a card to a \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_a2cf19548e8cccbd6fc6f251109a518e9}{remove\+Last\+Card}} (\mbox{\hyperlink{class_card}{Card}} last\+Card)
+\begin{DoxyCompactList}\small\item\em Method that removes the last card that was added to a \mbox{\hyperlink{class_hand}{Hand}} from the \mbox{\hyperlink{class_hand}{Hand}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_a67f85fee00b7dc52bb859326c27f3a32}{set\+Name}} (std\+::string new\+Name)
+\begin{DoxyCompactList}\small\item\em Method that sets the name of a \mbox{\hyperlink{class_hand}{Hand}} to a specified input string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hand_ae7c987410669e0fc26786f7e4942aaf9}{check\+Bust}} ()
+\begin{DoxyCompactList}\small\item\em Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has busted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hand_a04d3274aea2c356c3e27a05c63a72070}{check\+Blackjack}} ()
+\begin{DoxyCompactList}\small\item\em Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has won Blackjack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_hand_a605d224b13690799017fa5f78fc9db56}{cards}}
+\item 
+int \mbox{\hyperlink{class_hand_a7a0dad9d54b67cb396c930b7941e07c4}{total\+Value}}
+\item 
+std\+::string \mbox{\hyperlink{class_hand_a40e435bf2a77d412562aed6a88d7e0d8}{hand\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hand_aa733faf150351c640fc7d1bf460b07e9}\label{class_hand_aa733faf150351c640fc7d1bf460b07e9}} 
+\index{Hand@{Hand}!Hand@{Hand}}
+\index{Hand@{Hand}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{Hand()}{Hand()}}
+{\footnotesize\ttfamily Hand\+::\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for a \mbox{\hyperlink{class_hand}{Hand}} object that initializes total\+Value to 0 and the hand\+Name to \char`\"{}hand\char`\"{}. 
+
+Constructor for a \mbox{\hyperlink{class_hand}{Hand}} object. \mbox{\Hypertarget{class_hand_a7ff29a6f23f98c5e57f44d23a76912be}\label{class_hand_a7ff29a6f23f98c5e57f44d23a76912be}} 
+\index{Hand@{Hand}!````~Hand@{$\sim$Hand}}
+\index{````~Hand@{$\sim$Hand}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{$\sim$Hand()}{~Hand()}}
+{\footnotesize\ttfamily Hand\+::$\sim$\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for a \mbox{\hyperlink{class_hand}{Hand}} object. 
+
+Destructor for a \mbox{\hyperlink{class_hand}{Hand}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hand_a8a3ed41baea1af51d96accc7a31ac0b9}\label{class_hand_a8a3ed41baea1af51d96accc7a31ac0b9}} 
+\index{Hand@{Hand}!addCard@{addCard}}
+\index{addCard@{addCard}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{addCard()}{addCard()}}
+{\footnotesize\ttfamily void Hand\+::add\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{new\+Card }\end{DoxyParamCaption})}
+
+
+
+Method that adds a card to a \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Takes a card as input, and adjusts the total value according to the card\textquotesingle{}s number. If the card\textquotesingle{}s number is over 10, it is added as 10 because this is the max value of a card in Blackjack. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Card} & The card to be added to the hand. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hand_a04d3274aea2c356c3e27a05c63a72070}\label{class_hand_a04d3274aea2c356c3e27a05c63a72070}} 
+\index{Hand@{Hand}!checkBlackjack@{checkBlackjack}}
+\index{checkBlackjack@{checkBlackjack}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{checkBlackjack()}{checkBlackjack()}}
+{\footnotesize\ttfamily bool Hand\+::check\+Blackjack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has won Blackjack. 
+
+Checks the value of the cards for a player to determine if there is blackjack, i.\+e. the total\+Value of the cards is equal to 21. \begin{DoxyReturn}{Returns}
+Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has won, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hand_ae7c987410669e0fc26786f7e4942aaf9}\label{class_hand_ae7c987410669e0fc26786f7e4942aaf9}} 
+\index{Hand@{Hand}!checkBust@{checkBust}}
+\index{checkBust@{checkBust}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{checkBust()}{checkBust()}}
+{\footnotesize\ttfamily bool Hand\+::check\+Bust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method that checks if a \mbox{\hyperlink{class_hand}{Hand}} has busted. 
+
+Checks the value of the cards for a player to determine if there is a bust, i.\+e. the total\+Value of the cards exceeds 21. \begin{DoxyReturn}{Returns}
+Bool, true if the \mbox{\hyperlink{class_hand}{Hand}} has busted, and false if the \mbox{\hyperlink{class_hand}{Hand}} has not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hand_a2cf19548e8cccbd6fc6f251109a518e9}\label{class_hand_a2cf19548e8cccbd6fc6f251109a518e9}} 
+\index{Hand@{Hand}!removeLastCard@{removeLastCard}}
+\index{removeLastCard@{removeLastCard}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{removeLastCard()}{removeLastCard()}}
+{\footnotesize\ttfamily void Hand\+::remove\+Last\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{last\+Card }\end{DoxyParamCaption})}
+
+
+
+Method that removes the last card that was added to a \mbox{\hyperlink{class_hand}{Hand}} from the \mbox{\hyperlink{class_hand}{Hand}}. 
+
+Removes the most recently added card from the hand, specified by input variable last\+Card, and adjusts the total\+Value of the \mbox{\hyperlink{class_hand}{Hand}} according to that card\textquotesingle{}s value. If the card\textquotesingle{}s number is over 10, it is subtracted as 10 because this is the max value of a card in Blackjack. 
+\begin{DoxyParams}{Parameters}
+{\em last\+Card} & The card that was most recently added to the \mbox{\hyperlink{class_hand}{Hand}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hand_a67f85fee00b7dc52bb859326c27f3a32}\label{class_hand_a67f85fee00b7dc52bb859326c27f3a32}} 
+\index{Hand@{Hand}!setName@{setName}}
+\index{setName@{setName}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Hand\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Method that sets the name of a \mbox{\hyperlink{class_hand}{Hand}} to a specified input string. 
+
+Sets the hand\+Name of the \mbox{\hyperlink{class_hand}{Hand}} to the input string containing the new name. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & A string containing the desired new name of the \mbox{\hyperlink{class_hand}{Hand}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_hand_a605d224b13690799017fa5f78fc9db56}\label{class_hand_a605d224b13690799017fa5f78fc9db56}} 
+\index{Hand@{Hand}!cards@{cards}}
+\index{cards@{cards}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{cards}{cards}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_card}{Card}}$>$ Hand\+::cards\hspace{0.3cm}{\ttfamily [private]}}
+
+vector structure that contains the cards in a hand \mbox{\Hypertarget{class_hand_a40e435bf2a77d412562aed6a88d7e0d8}\label{class_hand_a40e435bf2a77d412562aed6a88d7e0d8}} 
+\index{Hand@{Hand}!handName@{handName}}
+\index{handName@{handName}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{handName}{handName}}
+{\footnotesize\ttfamily std\+::string Hand\+::hand\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+string representing the name of a hand \mbox{\Hypertarget{class_hand_a7a0dad9d54b67cb396c930b7941e07c4}\label{class_hand_a7a0dad9d54b67cb396c930b7941e07c4}} 
+\index{Hand@{Hand}!totalValue@{totalValue}}
+\index{totalValue@{totalValue}!Hand@{Hand}}
+\doxysubsubsection{\texorpdfstring{totalValue}{totalValue}}
+{\footnotesize\ttfamily int Hand\+::total\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+integer representing the total value of the cards in a hand 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+models/\mbox{\hyperlink{_hand_8h}{Hand.\+h}}\item 
+models/\mbox{\hyperlink{_hand_8cpp}{Hand.\+cpp}}\end{DoxyCompactItemize}
