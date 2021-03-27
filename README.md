@@ -1,4 +1,7 @@
-# CS 3307 Group 23 Blackjack Game
+# Voiced Controlled Blackjack Game
+
+## About
+A C++ project for CS3307 to build a voice-controlled blackjack game using Microsoft Speech SDK on Raspberry Pi.
 
 ## Installation Steps
 
