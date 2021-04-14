@@ -31,7 +31,7 @@ Input::~Input() {}
 string Input::inputFromVoice()
 {
 	setlocale(LC_ALL, "");
-	auto config = SpeechConfig::FromSubscription("023548ea8c1e485a9ef13557bb98d402", "canadacentral");
+	auto config = SpeechConfig::FromSubscription("{apikey}", "{apiregion}");
 	auto recognizer = SpeechRecognizer::FromConfig(config);
 
 	cout << "Speak your command: \n";

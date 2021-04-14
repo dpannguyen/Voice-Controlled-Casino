@@ -31,7 +31,7 @@ Output::~Output() {}
 void Output::outputAsVoice(string output)
 {
 	setlocale(LC_ALL, "");
-	auto config = SpeechConfig::FromSubscription("023548ea8c1e485a9ef13557bb98d402", "canadacentral");
+	auto config = SpeechConfig::FromSubscription("{apikey}", "{apiregion}");
 	auto synthesizer = SpeechSynthesizer::FromConfig(config);
 
 	auto result = synthesizer->SpeakTextAsync(output).get();
